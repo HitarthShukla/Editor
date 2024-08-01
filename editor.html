@@ -22,6 +22,7 @@
                         <ul class="dropdown-content-appearance">
                             <li><a onclick="light()">Light</a></li>
                             <li><a onclick="dark()">Dark</a></li>
+                            <li><a onclick="neon()">Neon</a></li>
                         </ul>
                     </li>
                     <li><a href="general.html">General</a></li>
@@ -36,9 +37,21 @@
         </div>
     </nav>
     <main>
-        <p>
-            hello this is editor section 
-        </p>
+        <div class="container">
+            <div class="left">
+                <label>&nbsp; &nbsp;HTML</label>
+                <Textarea id="html-code"></Textarea>
+                <label>&nbsp; &nbsp;CSS</label>
+                <Textarea id="css-code"></Textarea>
+                <label>&nbsp; &nbsp;JavaScript</label>
+                <Textarea id="js-code"></Textarea>
+            </div>
+            <div class="right">
+                <label>&nbsp; &nbsp;Output</label>
+                <iframe id="output">
+                </iframe>
+            </div>
+        </div>
     </main>
     <script src="index.js"></script>
 </body>

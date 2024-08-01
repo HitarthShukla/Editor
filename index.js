@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const currentPath = window.location.pathname.split('/').pop();
-    const storedActiveLink = localStorage.getItem('activeLink');
-    const storedTheme = localStorage.getItem('theme');
 
-    
     function setActiveLink() {
         document.querySelectorAll('.navbar a').forEach(link => {
-            if (link.getAttribute('href') === currentPath || link.getAttribute('href') === storedActiveLink) {
+            if (link.getAttribute('href') === currentPath) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
@@ -14,49 +11,96 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function removeThemeClasses() {
+        const body = document.getElementById("body");
+        const navbar = document.querySelector('.navbar');
+        const navLinks = document.querySelectorAll('.nav-links a');
 
-    function applyTheme() {
-        if (storedTheme === 'dark') {
-            document.getElementById("body").style.backgroundColor = '#3e3e42';
-            document.querySelectorAll('.navbar a').forEach(link => {
-                if (link.getAttribute('href') === localStorage.getItem('activeLink')) {
-                    link.classList.add('active');
+        body.className = '';
+        navbar.className = 'navbar';
+        navLinks.forEach(link => {
+            link.classList.remove('neon-nav-links', 'neon-active');
+        });
+    }
+
+    function applyTheme(theme) {
+        const body = document.getElementById("body");
+        const navbar = document.querySelector('.navbar');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        removeThemeClasses();
+
+        if (theme === 'dark') {
+            body.classList.add('dark-theme');
+        } else if (theme === 'neon') {
+            body.classList.add('neon-theme');
+            navbar.classList.add('neon-navbar');
+            navLinks.forEach(link => {
+                link.classList.add('neon-nav-links');
+                if (link.classList.contains('active')) {
+                    link.classList.add('neon-active');
                 }
             });
         } else {
-            document.getElementById("body").style.backgroundColor = 'azure';
+            body.classList.add('light-theme');
         }
+
+        localStorage.setItem('theme', theme);
+    }
+
+    function loadTheme() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        applyTheme(savedTheme);
     }
 
     setActiveLink();
-    applyTheme();
+    loadTheme();
 
     document.querySelectorAll('.navbar a').forEach(link => {
         link.addEventListener('click', function() {
-            localStorage.setItem('activeLink', this.getAttribute('href'));
             setActiveLink();
         });
+    });
+
+    document.querySelector('.dropdown-content-appearance a[onclick="light()"]').addEventListener('click', () => applyTheme('light'));
+    document.querySelector('.dropdown-content-appearance a[onclick="dark()"]').addEventListener('click', () => applyTheme('dark'));
+    document.querySelector('.dropdown-content-appearance a[onclick="neon()"]').addEventListener('click', () => applyTheme('neon'));
+
+    const textarea = document.getElementById('html-code');
+
+    textarea.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' && textarea.value[textarea.selectionStart - 1] === '!') {
+            const boilerplate = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+            `;
+            event.preventDefault();
+
+            const start = textarea.selectionStart - 1; 
+            const end = textarea.selectionEnd;
+            textarea.value = textarea.value.substring(0, start) + boilerplate + textarea.value.substring(end);
+            textarea.selectionStart = textarea.selectionEnd = start + boilerplate.length;
+        }
     });
 });
 
 function dark() {
-    document.getElementById("body").style.backgroundColor = '#3e3e42';
-    document.getElementById("body").style.color = 'white';
-    localStorage.setItem('theme', 'dark');
-    document.querySelectorAll('.navbar a').forEach(link => {
-        if (link.getAttribute('href') === localStorage.getItem('activeLink')) {
-            link.classList.add('active');
-        }
-    });
+    applyTheme('dark');
 }
 
 function light() {
-    document.getElementById("body").style.backgroundColor = 'azure';
-    document.getElementById("body").style.color = 'black';  
-    localStorage.setItem('theme', 'light');
-    document.querySelectorAll('.navbar a').forEach(link => {
-        if (link.getAttribute('href') === localStorage.getItem('activeLink')) {
-            link.classList.add('active');
-        }
-    });
+    applyTheme('light');
+}
+
+function neon() {
+    applyTheme('neon');
 }
