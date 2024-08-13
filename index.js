@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.dropdown-content-appearance a[onclick="light()"]').addEventListener('click', () => applyTheme('light'));
     document.querySelector('.dropdown-content-appearance a[onclick="dark()"]').addEventListener('click', () => applyTheme('dark'));
     document.querySelector('.dropdown-content-appearance a[onclick="neon()"]').addEventListener('click', () => applyTheme('neon'));
-
     const textarea = document.getElementById('html-code');
 
     textarea.addEventListener('keydown', function(event) {
@@ -84,23 +83,56 @@ document.addEventListener('DOMContentLoaded', () => {
 </html>
             `;
             event.preventDefault();
-
             const start = textarea.selectionStart - 1; 
             const end = textarea.selectionEnd;
             textarea.value = textarea.value.substring(0, start) + boilerplate + textarea.value.substring(end);
             textarea.selectionStart = textarea.selectionEnd = start + boilerplate.length;
         }
     });
-});
+    document.querySelectorAll('.copy-link').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute('data-target');
+            const textarea = document.getElementById(targetId);
+            textarea.select();
+            document.execCommand('copy');
+            link.textContent = 'Copied';
+            window.getSelection().removeAllRanges();
 
+            setTimeout(() => {
+                link.textContent = 'Copy';
+            }, 3000);
+        });
+    });
+    document.querySelectorAll('.paste-link').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute('data-target');
+            const textarea = document.getElementById(targetId);
+
+            navigator.clipboard.readText().then(text => {
+                const start = textarea.selectionStart;
+                const end = textarea.selectionEnd;
+                textarea.value = textarea.value.substring(0, start) + text + textarea.value.substring(end);
+                textarea.selectionStart = textarea.selectionEnd = start + text.length;
+            });
+        });
+    });
+});
 function dark() {
     applyTheme('dark');
 }
-
 function light() {
     applyTheme('light');
 }
-
 function neon() {
     applyTheme('neon');
+}
+function run() {
+    let htmlCode = document.getElementById("html-code").value;
+    let cssCode = document.getElementById("css-code").value;
+    let jsCode = document.getElementById("js-code").value;
+    let output = document.getElementById("output");
+    output.contentDocument.body.innerHTML = htmlCode + "<style>" + cssCode +"</style>";
+    output.contentWindow.eval(jsCode);
 }

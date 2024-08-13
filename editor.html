@@ -33,18 +33,39 @@
             <li><a href="about.html">About</a></li>
         </ul>
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <img src="logo2.png" alt="Logo">
         </div>
     </nav>
     <main>
         <div class="container">
             <div class="left">
-                <label>&nbsp; &nbsp;HTML</label>
-                <Textarea id="html-code"></Textarea>
-                <label>&nbsp; &nbsp;CSS</label>
-                <Textarea id="css-code"></Textarea>
-                <label>&nbsp; &nbsp;JavaScript</label>
-                <Textarea id="js-code"></Textarea>
+                <label>
+                    <span class="label-text">HTML</span>
+                    <div class="link-wrapper">
+                        <a href="#" class="copy-link" data-target="html-code">Copy</a>
+                        <a href="#" class="paste-link" data-target="html-code">Paste</a>
+                    </div>
+                </label>
+                <textarea id="html-code" onkeyup="run()"></textarea>
+                
+                <label>
+                    <span class="label-text">CSS</span>
+                    <div class="link-wrapper">
+                        <a href="#" class="copy-link" data-target="css-code">Copy</a>
+                        <a href="#" class="paste-link" data-target="css-code">Paste</a>
+                    </div>
+                </label>
+                <textarea id="css-code" onkeyup="run()"></textarea>
+                
+                <label>
+                    <span class="label-text">JavaScript</span>
+                    <div class="link-wrapper">
+                        <a href="#" class="copy-link" data-target="js-code">Copy</a>
+                        <a href="#" class="paste-link" data-target="js-code">Paste</a>
+                    </div>
+                </label>
+                <textarea id="js-code" onkeyup="run()"></textarea>
+                
             </div>
             <div class="right">
                 <label>&nbsp; &nbsp;Output</label>

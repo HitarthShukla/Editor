@@ -3,46 +3,58 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    margin: 0px;
+    margin: 0;
     background-color: azure;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(45deg, #9933ff, #e6ccff);
     padding: 0 20px;
+    transition: background 0.5s ease;
 }
+
 .nav-links {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
+
 .nav-links li {
     position: relative;
     display: inline-block;
 }
+
 .nav-links a, .nav-links span {
     color: white;
     text-decoration: none;
     padding: 15px;
     display: block;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .nav-links a:hover, .nav-links span:hover {
     background-color: #94f2ff;
     color: blue;
 }
+
 .nav-links a.active {
     background-color: azure;
     color: blue;
 }
+
 .logo img {
     height: 45px;
     width: auto;
 }
+
 .settings-dropdown .dropdown-content,
 .appearance-dropdown .dropdown-content-appearance {
     display: none;
@@ -53,11 +65,14 @@ body {
     z-index: 1;
     padding: 0;
     margin: 0;
+    transition: display 0.3s ease;
 }
+
 .settings-dropdown .dropdown-content li,
 .appearance-dropdown .dropdown-content-appearance li {
     display: block;
 }
+
 .settings-dropdown .dropdown-content a,
 .appearance-dropdown .dropdown-content-appearance a,
 .settings-dropdown .dropdown-content span {
@@ -68,85 +83,118 @@ body {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .settings-dropdown .dropdown-content a:hover,
 .appearance-dropdown .dropdown-content-appearance a:hover,
 .settings-dropdown .dropdown-content span:hover {
     background-color: #ddd;
 }
+
 .settings-dropdown:hover .dropdown-content {
     display: block;
 }
+
 .appearance-dropdown:hover .dropdown-content-appearance {
     display: block;
     left: 100%;
     top: 0;
 }
+
 .light-theme {
     background-color: azure;
     color: black;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .light-theme textarea {
     background-color: white;
     color: black;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .light-theme label {
     background-color: blue;
     color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .dark-theme {
     background-color: #1f1f1f;
     color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .dark-theme textarea {
     background-color: #3e3e42;
     color: azure;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .dark-theme label {
     background-color: black;
     border: 2px solid blue;
     color: white;
+    transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
 }
+
 .neon-theme {
     background-color: black;
     color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .neon-theme textarea {
     background-color: #3e3e42;
     color: azure;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .neon-theme label {
     background-color: blue;
     color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .neon-navbar {
     background: linear-gradient(45deg, #39ff14, #00bfff);
     box-shadow: 0 0 10px #39ff14, 0 0 20px #00bfff;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
 }
+
 .neon-nav-links a {
     color: #39ff14;
     text-shadow: 0 0 5px #39ff14, 0 0 10px #00bfff;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
+
 .neon-nav-links a:hover {
     background-color: #00bfff;
     color: #fff;
     text-shadow: 0 0 5px #00bfff, 0 0 10px #39ff14;
 }
+
 .neon-nav-links a.active {
     background-color: #39ff14;
     color: blue;
     text-shadow: 0 0 5px blue, 0 0 10px #00bfff;
 }
+
 .container {
     width: 100%;
     height: 90vh;
     padding: 20px;
     display: flex;
+    transition: padding 0.5s ease;
 }
+
 .left, .right {
     flex-basis: 50%;
     padding: 10px;
+    transition: padding 0.5s ease;
 }
+
 textarea {
     width: 100%;
     height: 31%;
@@ -154,25 +202,57 @@ textarea {
     bottom: 0;
     outline: 0;
     font-size: 18px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    resize: vertical;
 }
+
 iframe {
     width: 100%;
     height: 102%;
     background: #fff;
     bottom: 0;
     outline: 0;
+    transition: background 0.5s ease;
 }
-label {
-    display: flex;
-    height: 25px;
-    align-items: center;
-    background: #000;
-    color: #fff;
-    z-index: 10;
-}
+
+
+
 @media (min-width: 768px) {
     .button-63 {
         font-size: 24px;
         min-width: 196px;
     }
 }
+label {
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    height: 25px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.label-text {
+    flex: 1; 
+}
+
+.link-wrapper {
+    display: flex;
+}
+
+.copy-link, .paste-link {
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.copy-link:hover, .paste-link:hover {
+    background-color: azure;
+    color: blue;
+}
+
+
