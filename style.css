@@ -7,6 +7,7 @@
 body {
     margin: 0;
     background-color: azure;
+    height: 1000px;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -50,9 +51,32 @@ body {
     color: blue;
 }
 
-.logo img {
-    height: 45px;
+.userinfo button {
+    height: 35px;
+    align-items: center;
+    background: none;
+    color: rgb(0, 0, 0);
+    padding: 3px 10px;
+    margin: 5px;
     width: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 2px solid #1f1f1f;
+}
+
+.userinfo button:hover {
+    height: 35px;
+    align-items: center;
+    background: blue;
+    color: azure;
+    padding: 3px 10px;
+    margin: 5px;
+    width: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+    box-shadow: #3e3e42 3px 3px ;
+    transition: background 0.5s ease;
 }
 
 .settings-dropdown .dropdown-content,
@@ -65,7 +89,8 @@ body {
     z-index: 1;
     padding: 0;
     margin: 0;
-    transition: display 0.3s ease;
+    transition: opacity 0.3s ease; /* Changed display to opacity */
+    opacity: 0; /* Default to hidden */
 }
 
 .settings-dropdown .dropdown-content li,
@@ -92,12 +117,13 @@ body {
     background-color: #ddd;
 }
 
-.settings-dropdown:hover .dropdown-content {
+.settings-dropdown:hover .dropdown-content,
+.appearance-dropdown:hover .dropdown-content-appearance {
     display: block;
+    opacity: 1; /* Make visible on hover */
 }
 
 .appearance-dropdown:hover .dropdown-content-appearance {
-    display: block;
     left: 100%;
     top: 0;
 }
@@ -215,14 +241,13 @@ iframe {
     transition: background 0.5s ease;
 }
 
-
-
 @media (min-width: 768px) {
     .button-63 {
         font-size: 24px;
         min-width: 196px;
     }
 }
+
 label {
     display: flex;
     align-items: center;
@@ -255,4 +280,86 @@ label {
     color: blue;
 }
 
+.imt {
+    position: relative;
+    height: 800px;
+    width: 100%;
+    overflow: hidden; 
+}
 
+.bgimage {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 100%; 
+    width: 100%;
+    object-fit: cover; 
+}
+
+.bgimage2, .bgimage3, .bgimage4 {
+    position: absolute; 
+    height: 30%; 
+    width: auto;
+    z-index: 11; 
+}
+
+.bgimage2 {
+    top: 10%;
+    left: 75%;
+}
+
+.bgimage2:hover {
+    background-color: azure;
+    border-radius: 25px;
+}
+
+.bgimage3 {
+    top: 40%;
+    left: 78%;
+}
+
+.bgimage3:hover {
+    background-color: azure;
+    border-radius: 25px;
+}
+
+.bgimage4 {
+    top: 70%;
+    left: 78%;
+}
+
+.bgimage4:hover {
+    background-color: azure;
+    border-radius: 25px;
+}
+
+.typewriter {
+    position: absolute;
+    top: 20%; 
+    left: 10px;
+    color: azure; 
+    font-size: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: #000 3px 3px 5px;
+    padding: 5px; 
+}
+
+.typewriter p {
+    overflow: hidden; 
+    border-right: .15em solid blue;
+    white-space: nowrap; 
+    letter-spacing: .15em; 
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: blue; }
+}
