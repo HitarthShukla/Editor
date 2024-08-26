@@ -89,8 +89,8 @@ body {
     z-index: 1;
     padding: 0;
     margin: 0;
-    transition: opacity 0.3s ease; /* Changed display to opacity */
-    opacity: 0; /* Default to hidden */
+    transition: opacity 0.3s ease; 
+    opacity: 0; 
 }
 
 .settings-dropdown .dropdown-content li,
@@ -120,7 +120,7 @@ body {
 .settings-dropdown:hover .dropdown-content,
 .appearance-dropdown:hover .dropdown-content-appearance {
     display: block;
-    opacity: 1; /* Make visible on hover */
+    opacity: 1; 
 }
 
 .appearance-dropdown:hover .dropdown-content-appearance {
