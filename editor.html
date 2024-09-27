@@ -34,46 +34,46 @@
         </ul>
         <div class="userinfo">
             <button id="login">
-                Login
+                <a href="login.html">Login</a>
             </button>
             <button id="signup">
-                Sign Up
+                <a href="Create_ac.html">Sign Up</a>
             </button>
         </div>
     </nav>
+    
     <main>
         <div class="container">
             <div class="left">
                 <label>
+                    <a onclick="ochtml()"><img src = "htmllogo.png" id = "html-logo"/></a>
                     <span class="label-text">HTML</span>
                     <div class="link-wrapper">
                         <a href="#" class="copy-link" data-target="html-code">Copy</a>
-                        <a href="#" class="paste-link" data-target="html-code">Paste</a>
                     </div>
                 </label>
                 <textarea id="html-code" onkeyup="run()"></textarea>
                 
                 <label>
+                    <a onclick="occss()"><img src = "csslogo.png" id = "css-logo"/></a>
                     <span class="label-text">CSS</span>
                     <div class="link-wrapper">
                         <a href="#" class="copy-link" data-target="css-code">Copy</a>
-                        <a href="#" class="paste-link" data-target="css-code">Paste</a>
                     </div>
                 </label>
                 <textarea id="css-code" onkeyup="run()"></textarea>
                 
                 <label>
+                    <a onclick="ocjs()"><img src = "jslogo.png" id = "js-logo"/></a>
                     <span class="label-text">JavaScript</span>
                     <div class="link-wrapper">
                         <a href="#" class="copy-link" data-target="js-code">Copy</a>
-                        <a href="#" class="paste-link" data-target="js-code">Paste</a>
                     </div>
                 </label>
                 <textarea id="js-code" onkeyup="run()"></textarea>
-                
             </div>
             <div class="right">
-                <label>&nbsp; &nbsp;Output</label>
+                <label>Output</label>
                 <iframe id="output">
                 </iframe>
             </div>

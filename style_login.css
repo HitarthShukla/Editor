@@ -1,0 +1,91 @@
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.logo h1{
+    padding-right: 2px;
+}
+.logo img{
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
+.portal{
+    margin: auto;
+    padding-left: 25px;
+    padding-top: 15px;
+    height: 370px;
+    width: 350px;
+    border: 0.5px solid rgb(198, 198, 198);
+    font-weight: 400;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 30px;
+    font-family: 'Segoe UI';
+}
+.portal label{
+    font-size: 14px;
+    font-weight: bolder;
+    /* vertical-align: middle; */
+}
+input{
+    height: 25px;
+    width: 90%;
+    display: block;
+    border-radius: 3px;
+    border: 0.5px solid gray;
+}
+.login{
+    display: flex;
+    height: 30px;
+    width: auto ;
+    margin-top: 20px;
+    justify-content: center;
+    margin-right: 25px;
+    border: 0.5px solid rgb(173, 173, 173);
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: #9933ff;
+    cursor: pointer;
+}
+.login a{
+    text-decoration: none;
+    color: white;
+}
+.login:hover{
+    background-color: #6826aa;
+    transition: 400ms;
+}
+.newac{
+    padding-top: 15px;
+    font-size: 17px;
+}
+.create{
+    display: flex;
+    height: 30px;
+    width: auto ;
+    margin-top: 10px;
+    justify-content: center;
+    margin-right: 25px;
+    border: 0.5px solid rgb(173, 173, 173);
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: #9933ff;
+    cursor: pointer;
+}
+.create a{
+    text-decoration: none;
+    color: white;
+}
+.create:hover{
+    background-color: #6826aa;
+    transition: 400ms;
+}
+.message{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Segoe UI';
+}

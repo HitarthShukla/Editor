@@ -136,3 +136,45 @@ function run() {
     output.contentDocument.body.innerHTML = htmlCode + "<style>" + cssCode +"</style>";
     output.contentWindow.eval(jsCode);
 }
+const htmllogo = document.getElementById("html-logo");
+const csslogo = document.getElementById("css-logo");
+const jslogo = document.getElementById("js-logo");
+const htmlcode = document.getElementById("html-code");
+const csscode = document.getElementById("css-code");
+const jscode = document.getElementById("js-code");
+var hclicks  = 0;
+var cclicks  = 0;
+var jclicks  = 0;
+function ochtml() {
+    hclicks +=1;
+    if (hclicks%2 === 1) {
+        htmllogo.classList.add('graycolor');
+        htmlcode.style.display = "none";
+    }
+    else {
+        htmllogo.classList.remove('graycolor');
+        htmlcode.style.display = "inline";
+    }
+}
+function occss() {
+    cclicks +=1;
+    if (cclicks%2 === 1) {
+        csslogo.classList.add('graycolor');
+        csscode.style.display = "none";
+    }
+    else {
+        csslogo.classList.remove('graycolor');
+        csscode.style.display = "inline";
+    }
+}
+function ocjs() {
+    jclicks +=1;
+    if (jclicks%2 === 1) {
+        jslogo.classList.add('graycolor');
+        jscode.style.display = "none";
+    }
+    else {
+        jslogo.classList.remove('graycolor');
+        jscode.style.display = "inline";
+    }
+}
