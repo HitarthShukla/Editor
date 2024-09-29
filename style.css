@@ -6,23 +6,27 @@
 
 body {
     margin: 0;
-    background-color: azure;
+    /* background-color: azure; */
+    background-color: #FAF7F5;
     height: 1000px;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 svg{
-    color: white;
+    height: 25px;
+    color: #4A2C2A;
+    width: auto;
+    padding-right: 2px;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(45deg, #9933ff, #e6ccff);
+    /* background: linear-gradient(45deg, #9933ff, #e6ccff); */
+    background-color: #F5F0E1;
     padding: 0 20px;
     transition: background 0.5s ease;
-}
-
+}   
 .nav-links {
     list-style-type: none;
     margin: 0;
@@ -31,12 +35,13 @@ svg{
 }
 
 .nav-links li {
-    position: relative;
+    position: relative; 
     display: inline-block;
 }
 
 .nav-links a, .nav-links span {
-    color: white;
+    /* color: white; */
+    color: #4A2C2A;
     text-decoration: none;
     padding: 15px;
     display: block;
@@ -45,34 +50,43 @@ svg{
 }
 
 .nav-links a:hover, .nav-links span:hover {
-    background-color: #94f2ff;
-    color: blue;
+    /* background-color: #94f2ff; */
+    background-color: #FFE58F;
+    /* color: blue; */
+    color: #4A2C2A;
 }
 
 .nav-links a.active {
-    background-color: azure;
-    color: blue;
+    /* background-color: azure; */
+    /* background-color: #fba4a4; */
+    /* color: blue; */
+    color: #f42b2b;
 }
 
 .userinfo button {
     height: 35px;
     align-items: center;
-    background: none;
-    color: rgb(0, 0, 0);
+    /* background: none; */
+    /* color: rgb(0, 0, 0); */
+    color: white;
     padding: 3px 10px;
     margin: 5px;
     width: auto;
     overflow: hidden;
+    font-family: 'Segoe UI';
+    font-weight: 800;
     border-radius: 5px;
     border: 2px solid #1f1f1f;
     cursor: pointer;
 }
-
-.userinfo button:hover {
+.userinfo a:hover{
+    color: #f42b2b;
+}
+.userinfo button:hover{
     height: 35px;
     align-items: center;
-    background: blue;
-    color: azure;
+    /* background: blue; */
+    background-color: #FFE58F;
     padding: 3px 10px;
     margin: 5px;
     width: auto;
@@ -134,7 +148,9 @@ svg{
 
 .light-theme {
     background-color: azure(6, 46, 81);
-    color: black;
+    /* color: black; */
+    font-family: 'Segoe UI';
+    font-weight: 500;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -145,8 +161,10 @@ svg{
 }
 
 .light-theme label {
-    background-color: blue;
-    color: white;
+    /* background-color: blue; */
+    background-color: #F5F0E1;
+    /* color: white; */
+    color: #4A2C2A;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -224,6 +242,10 @@ svg{
     padding: 10px;
     transition: padding 0.5s ease;
 }
+.right label{
+    font-size: 18px;
+    font-weight: 800;
+}
 
 textarea {
     width: 100%;
@@ -264,26 +286,46 @@ label {
 }
 
 .label-text {
-    flex: 1; 
+     /* flex: 1;  */
+    /*display: flex; */
+    /* justify-content: space-between; */
+    font-family: 'Segoe UI';
+    font-weight: 800;
+    font-size: 18px;
+    font-style: italic;
+    padding-left: 4px;
+    /* border: 0.5px solid rgb(198, 198, 198);  */
+    /* background-color: #cdfff6; */
+    border-radius: 5px;
+
+    width: fit-content;
 }
 
 .link-wrapper {
     display: flex;
     align-items: flex-end;
     padding-right: 0px;
+    margin-left: auto;
 }
 
 .copy-link, .paste-link {
-    background-color: blue;
+    /* background-color: blue; */
+    background-color: #f15555;
+    border: 0.5px solid rgb(194, 194, 194);
+    border-radius: 20px;
     color: white;
     text-decoration: none;
+    font-weight: 800;
     padding: 5px 10px;
+    margin-left: auto;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .copy-link:hover, .paste-link:hover {
-    background-color: azure;
-    color: blue;
+    /* background-color: azure; */
+    background-color: white;
+    /* color: blue; */
+    color: #f42b2b;
 }
 
 .imt {
@@ -343,16 +385,18 @@ label {
     position: absolute;
     top: 20%; 
     left: 10px;
-    color: azure; 
+    /* color: azure;  */
+    color: #f4492b;
+    font-family: 'Segoe UI';
     font-size: 60px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-shadow: #000 3px 3px 5px;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    text-shadow: #6a6a6a 3px 3px 5px;
     padding: 5px; 
 }
 
-.typewriter p {
+.typewriter {
     overflow: hidden; 
-    border-right: .15em solid blue;
+    border-right: .15em solid #8f3802;
     white-space: nowrap; 
     letter-spacing: .15em; 
     animation: 
@@ -395,6 +439,41 @@ label {
 .graycolor {
     filter: grayscale(100%);
 }
+
+/* About CSS */
+.head h1{
+    padding-left: 30px;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+}
+.def{
+    padding: 25px;
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    text-align: justify;
+}
+.def p{
+    padding-bottom: 15px;
+}
+.contact{
+    padding-left: 25px;
+    font-family: 'Segoe UI';
+}
+.contact h1{
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+.msg{
+    font-size: 18px;
+}
+.id a{
+    text-decoration: none;
+    color: blue;
+}
+.id a:hover{
+    color: orange;
+}
+
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
@@ -404,3 +483,4 @@ label {
     from, to { border-color: transparent }
     50% { border-color: blue; }
 }
+

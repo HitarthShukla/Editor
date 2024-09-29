@@ -1,0 +1,263 @@
+.progress {
+    height: 20%;
+    width: 70%;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.box {
+    height: 30%;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course {
+    height: 100%;
+    width: 300px;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+ #htmlc {
+    background-color: orangered;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, visibility 0.3s ease, display 0.3s ease;
+ }
+ 
+ #htmlc:hover {
+    box-shadow: rgb(255, 0, 0) 5px 5px 10px;
+    background-color: #3f3f3f;
+    transform: translate(-2px, -2px);
+ }
+
+ #cssc {
+    background-color: turquoise;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, visibility 0.3s ease, display 0.3s ease;
+ }
+
+ #cssc:hover {
+    box-shadow: teal 5px 5px 10px;
+    background-color: #3f3f3f;
+    transform: translate(-2px, -2px);
+ }
+
+ #jsc {
+    background-color: yellow;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, visibility 0.3s ease, display 0.3s ease;
+ }
+
+ #jsc:hover {
+    box-shadow: rgb(251, 255, 0) 5px 5px 10px;
+    background-color: #3f3f3f;
+    transform: translate(-2px, -2px);
+ }
+
+ .boxbox {
+    height: 100%;
+    width: 100%;
+    margin-top: 60px;
+ }
+
+.htmlcard, .csscard, .jscard {
+    margin: auto;
+    width: fit-content;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+    text-shadow: 2px 2px 5px rgb(73, 73, 73);
+    color: #1f1f1f;
+    transform: translate(0,100px);
+}
+
+ #html-beginner, #html-intermediate, #html-advanced {
+    font-size: 25px;
+    font-weight: bolder;
+    color: #ffffff;
+    margin-top: 5%;
+    margin-left: 15px;
+    visibility: hidden;
+ }
+
+ #css-beginner, #css-intermediate, #css-advanced {
+    font-size: 25px;
+    font-weight: bolder;
+    color: #ffffff;
+    margin-top: 5%;
+    margin-left: 15px;
+    visibility: hidden;
+ }
+
+ #js-beginner, #js-intermediate, #js-advanced {
+    font-size: 25px;
+    font-weight: bolder;
+    color: #ffffff;
+    margin-top: 5%;
+    margin-left: 15px;
+    visibility: hidden;
+ }
+
+ #html-beginner-bar, #html-intermediate-bar, #html-advanced-bar {
+    background-color: #1f1f1f;
+    height: 12px;
+    width: 250px;
+    margin-left: 15px;
+    margin-top: 5%;
+    border-radius: 10px;
+    border: 2px solid black;
+    visibility: hidden;
+ }
+
+ #css-beginner-bar, #css-intermediate-bar, #css-advanced-bar {
+    background-color: #1f1f1f;
+    height: 12px;
+    width: 250px;
+    margin-left: 15px;
+    margin-top: 5%;
+    border-radius: 10px;
+    border: 2px solid black;
+    visibility: hidden;
+ }
+
+ #js-beginner-bar, #js-intermediate-bar, #js-advanced-bar {
+    background-color: #1f1f1f;
+    height: 12px;
+    width: 250px;
+    margin-left: 15px;
+    margin-top: 5%;
+    border-radius: 10px;
+    border: 2px solid black;
+    visibility: hidden;
+ }
+
+ #html-beginner-bar-progress, #css-beginner-bar-progress, #js-beginner-bar-progress {
+    height: 100%;
+    width: 100%;
+    background-color:#39ff14;
+    border-radius: 10px;
+    visibility: hidden;
+ }
+
+ #html-intermediate-bar-progress, #css-intermediate-bar-progress, #js-intermediate-bar-progress {
+    height: 100%;
+    width: 50%;
+    background-color:yellow;
+    border-radius: 10px;
+    visibility: hidden;
+ }
+
+ #html-advanced-bar-progress, #css-advanced-bar-progress, #js-advanced-bar-progress {
+    height: 100%;
+    width: 10%;
+    background-color:rgb(255, 0, 0);
+    border-radius: 10px;
+    visibility: hidden;
+ }
+
+#htmlc:hover #html-beginner,#htmlc:hover #html-intermediate,#htmlc:hover #html-advanced,
+#htmlc:hover  #html-beginner-bar,
+#htmlc:hover  #html-intermediate-bar,
+#htmlc:hover  #html-advanced-bar,#htmlc:hover #html-beginner-bar-progress,#htmlc:hover #html-intermediate-bar-progress,#htmlc:hover #html-advanced-bar-progress{
+    visibility: visible;
+}
+
+#htmlc:hover #html-beginner-bar-progress, #cssc:hover #css-beginner-bar-progress, #jsc:hover #js-beginner-bar-progress {
+    animation: beginner-loading 0.5s linear;
+}
+
+#cssc:hover #css-beginner,#cssc:hover #css-intermediate,#cssc:hover #css-advanced,
+#cssc:hover  #css-beginner-bar,
+#cssc:hover  #css-intermediate-bar,
+#cssc:hover  #css-advanced-bar,#cssc:hover #css-beginner-bar-progress,#cssc:hover #css-intermediate-bar-progress,#cssc:hover #css-advanced-bar-progress {
+    visibility: visible;
+}
+
+#htmlc:hover #html-intermediate-bar-progress, #cssc:hover #css-intermediate-bar-progress, #jsc:hover #js-intermediate-bar-progress {
+    animation: intermediate-loading 0.5s linear;
+}
+
+#jsc:hover #js-beginner,#jsc:hover #js-intermediate,#jsc:hover #js-advanced,
+#jsc:hover  #js-beginner-bar,
+#jsc:hover  #js-intermediate-bar,
+#jsc:hover  #js-advanced-bar,#jsc:hover #js-beginner-bar-progress,#jsc:hover #js-intermediate-bar-progress,#jsc:hover #js-advanced-bar-progress {
+    visibility: visible ;
+}
+
+#htmlc:hover #html-advanced-bar-progress, #cssc:hover #css-advanced-bar-progress, #jsc:hover #js-advanced-bar-progress {
+    animation: advanced-loading 0.5s linear;
+}
+
+#htmlc:hover .htmlcard {
+    display: none;
+}
+
+#cssc:hover .csscard {
+    display: none;
+}
+
+#jsc:hover .jscard {
+    display: none;
+}
+
+#htmllogo2 {
+    height: 100px;
+    width: auto;
+    z-index: -1;
+    transform: translate(255px,-360px);
+    /* box-shadow: 2px 5px 5px #1f1f1f; */
+}
+
+
+#csslogo2 {
+    height: 110px;
+    width: auto;
+    z-index: -1;
+    transform: translate(613px,-360px);
+    /* box-shadow: 2px 5px 5px #1f1f1f; */
+}
+
+#jslogo2 {
+    height: 90px;
+    width: auto;
+    z-index: -1;
+    transform: translate(970px,-370px);
+    /* box-shadow: 2px 5px 5px #1f1f1f;     */
+}
+
+/* @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: blue; }
+} */
+
+@keyframes beginner-loading {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes intermediate-loading {
+    from {
+        width: 0;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes advanced-loading {
+    from {
+        width: 0;
+    }
+    to {
+        width: 10%;
+    }
+}

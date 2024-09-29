@@ -4,6 +4,7 @@
 }
 .logo h1{
     padding-right: 2px;
+    font-family: 'Segoe UI';
 }
 .logo img{
     height: 40px;
@@ -35,26 +36,29 @@ input{
     border-radius: 3px;
     border: 0.5px solid gray;
 }
-.login{
-    display: flex;
-    height: 30px;
-    width: auto ;
-    margin-top: 20px;
+#login{
+    text-align: center;
+    align-items: center;    
     justify-content: center;
-    margin-right: 25px;
-    border: 0.5px solid rgb(173, 173, 173);
+    width: 95%;
+    margin-top: 20px;
+    /* border: 0.1px solid rgb(173, 173, 173); */
     font-size: 20px;
     border-radius: 8px;
-    background-color: #9933ff;
+    color: white;
+    font-weight: 600;
+    background-color: #f15555;
     cursor: pointer;
 }
-.login a{
+
+#login:hover{
+    /* background-color: #6826aa; */
+    background-color: #fd8585;
+    transition: 400ms;
+}
+#login a{
     text-decoration: none;
     color: white;
-}
-.login:hover{
-    background-color: #6826aa;
-    transition: 400ms;
 }
 .newac{
     padding-top: 15px;
@@ -62,25 +66,34 @@ input{
 }
 .create{
     display: flex;
-    height: 30px;
-    width: auto ;
-    margin-top: 10px;
     justify-content: center;
-    margin-right: 25px;
-    border: 0.5px solid rgb(173, 173, 173);
+    margin-right: 8%;
+}
+#signup{
+    text-align: center;
+    align-items: center;    
+    justify-content: center;
+    width: 95%;
+    margin-top: 20px;
+    /* border: 0.1px solid rgb(173, 173, 173); */
     font-size: 20px;
     border-radius: 8px;
-    background-color: #9933ff;
+    color: white;
+    font-weight: 600;
+    /* font-family: 'Segoe UI'; */
+    background-color: #f15555;
     cursor: pointer;
 }
-.create a{
+#signup a{
     text-decoration: none;
     color: white;
 }
-.create:hover{
-    background-color: #6826aa;
+#signup:hover{
+    /* background-color: #6826aa; */
+    background-color: #fd8585;
+    color: #f15555;
     transition: 400ms;
-}
+} 
 .message{
     margin-top: 25px;
     display: flex;

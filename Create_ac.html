@@ -7,27 +7,29 @@
     <link rel="stylesheet" href="style_login.css">
 </head>
 <body>
-    <div class="logo">
-        <h1><strong>CodynLrn</strong><img src="logo2.png" alt=""></h1>
-    </div>
-    <div class="portal">
-        <div class="head">Sign in</div>
-        <label for="username" maxlength="130">Username</label>
-        <input type="text" placeholder="Enter Your Name">
-        <label for="password" maxlength="130">Password</label>
-        <input type="text" placeholder="Enter Your Password">
-        <div class="login">
-            <a href="/">Create New Account</a>
+    <form method="post" action="Create_ac.php">
+        <div class="logo">
+            <h1><strong>CodynLrn</strong><img src="logo2.png" alt=""></h1>
         </div>
-        <div class="newac">
-            Having an existing account?
+        <div class="portal">
+            <div class="head">Create New Account</div>
+            <label for="username">Username</label>
+            <input type="text" name="UserName" placeholder="Enter Your Name" maxlength="130" required>
+            <label for="password">Password</label>
+            <input type="password" name="Password" placeholder="Enter Your Password" maxlength="130" required>
+            <button id="signup" onclick="change2()">
+                <a href="Create_ac.html">Sign Up</a>
+            </button>
+            <div class="newac">
+                Having an existing account?
+            </div>
+            <button id="login" onclick="change1()">
+                <a href="login.html">Login</a>
+            </button>
+            <div class="message">
+                Thank you For Visiting us
+            </div>
         </div>
-        <div class="create">
-            <a href="login.html">Login</a>
-        </div>
-        <div class="message">
-            Thank you For Visiting us
-        </div>
-    </div>
+    </form>
 </body>
 </html>

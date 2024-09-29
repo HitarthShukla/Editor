@@ -178,3 +178,12 @@ function ocjs() {
         jscode.style.display = "inline";
     }
 }
+function change1() {
+    // Optionally perform any checks here
+    window.open("login.html"); // Redirects to the login.html page
+    console.log("hafjf")
+}
+
+
+
+

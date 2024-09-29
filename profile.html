@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodynLrn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_profile.css">
+</head>
+<body id="body">
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="editor.html">Editor</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li class="settings-dropdown">
+                <span>Settings</span>
+                <ul class="dropdown-content">
+                    <li class="appearance-dropdown">
+                        <span>Appearance</span>
+                        <ul class="dropdown-content-appearance">
+                            <li><a onclick="light()">Light</a></li>
+                            <li><a onclick="dark()">Dark</a></li>
+                            <li><a onclick="neon()">Neon</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="general.html">General</a></li>
+                    <li><a href="preferences.html">Preferences</a></li>
+                </ul>
+            </li>
+            <li><a href="connect.html">Connect</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="userinfo">
+            <button id="login">
+                <a href="login.html">Login</a>
+            </button>
+            <button id="signup">
+                <a href="Create_ac.html">Sign Up</a>
+            </button>
+        </div>
+    </nav>
+    <main>
+    <div class="profile">
+        <div class="user">
+            <div class="details">Personal Details</div>
+            <div class="photo"></div>
+            <div class="name">Username</div>
+            <div class="share">
+                <a href="/">Share Profile</a>
+            </div>
+            <div class="update">
+                <a href="/">Update Profile</a>
+            </div>
+        </div>
+        <div class="progress">Overall Progress
+            <div class="sub">
+                <div class="html">
+                    HTML Progress
+                </div>
+                <div class="css">
+                    CSS Progress
+                </div>
+                <div class="js">
+                    JavaScript Progress
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
