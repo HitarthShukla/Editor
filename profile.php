@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
+    // User is logged in, proceed with your code
+    
+    echo "<script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const userDetails = document.getElementsByClassName('userinfo')[0];
+          if (userDetails) {
+              userDetails.style.display = 'none';
+          }
+      });
+      </script>";
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +28,10 @@
 <body id="body">
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="editor.html">Editor</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="learn.html">Learn</a></li>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="editor.php">Editor</a></li>
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="learn.php">Learn</a></li>
             <li class="settings-dropdown">
                 <span>Settings</span>
                 <ul class="dropdown-content">
@@ -22,7 +39,6 @@
                         <span>Appearance</span>
                         <ul class="dropdown-content-appearance">
                             <li><a onclick="light()">Light</a></li>
-                            <li><a onclick="dark()">Dark</a></li>
                             <li><a onclick="neon()">Neon</a></li>
                         </ul>
                     </li>
@@ -30,8 +46,8 @@
                     <li><a href="preferences.html">Preferences</a></li>
                 </ul>
             </li>
-            <li><a href="connect.html">Connect</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="connect.php">Connect</a></li>
+            <li><a href="about.php">About</a></li>
         </ul>
         <div class="userinfo">
             <button id="login">

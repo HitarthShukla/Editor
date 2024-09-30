@@ -7,7 +7,8 @@
 body {
     margin: 0;
     /* background-color: azure; */
-    background-color: #FAF7F5;
+    /* background-color: #101828; */
+    background-color: #181818;
     height: 1000px;
     transition: background-color 0.5s ease, color 0.5s ease;
     overflow-x: hidden;
@@ -24,7 +25,8 @@ svg{
     justify-content: space-between;
     align-items: center;
     /* background: linear-gradient(45deg, #9933ff, #e6ccff); */
-    background-color: #F5F0E1;
+    /* background-color: #0A0F25; */
+    background-color: #2C2C2C;
     padding: 0 20px;
     transition: background 0.5s ease;
 }   
@@ -35,14 +37,14 @@ svg{
     display: flex;
 }
 
-.nav-links li {
+.nav-links li a{
     position: relative; 
     display: inline-block;
 }
 
 .nav-links a, .nav-links span {
     /* color: white; */
-    color: #4A2C2A;
+    color: #F1F1F1;
     text-decoration: none;
     padding: 15px;
     display: block;
@@ -52,18 +54,20 @@ svg{
 
 .nav-links a:hover, .nav-links span:hover {
     /* background-color: #94f2ff; */
-    background-color: #FFE58F;
+    background-color: #393939;
     /* color: blue; */
-    color: #4A2C2A;
+    /* color: #3A506B; */
 }
 
 .nav-links a.active {
     /* background-color: azure; */
     /* background-color: #fba4a4; */
     /* color: blue; */
-    color: #f42b2b;
+    color: #4DE1FF;
 }
-
+/* .userinfo{
+    display: none;
+} */
 .userinfo button {
     height: 35px;
     align-items: center;
@@ -216,21 +220,23 @@ svg{
     color: white;
 }
 
-.neon-nav-links a {
+.neon-nav-links a{
     /* text-shadow: 0 0 5px #39ff14, 0 0 10px #00bfff; */
+    color: white;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .neon-nav-links a:hover {
     background-color: #2C2C2E;
     color: #007AFF;
-    text-shadow: 0 0 5px #00bfff, 0 0 10px #39ff14;
+    /* text-shadow: 0 0 5px #00bfff, 0 0 10px #39ff14; */
 }
 
-.neon-nav-links a.active {
-    background-color: #007AFF;
-    color: #007AFF;
-    text-shadow: 0 0 5px blue, 0 0 10px #00bfff;
+.neon-nav-links a:active {
+    /* background-color: #007AFF; */
+    /* color: #007AFF; */
+    color: red;
+    /* text-shadow: 0 0 5px blue, 0 0 10px #00bfff; */
 }
 
 .container {
@@ -261,6 +267,22 @@ textarea {
     transition: background-color 0.5s ease, color 0.5s ease;
     resize: vertical;
 }
+#html-code{
+    background-color: #2C2C2C;
+    color: white;
+}
+#css-code{
+    background-color: #2C2C2C;
+    color: white;
+}
+#js-code{
+    background-color: #2C2C2C;
+    color: white;
+}
+#output{
+    background-color: rgb(229, 240, 242);
+    color-scheme: white;
+}
 
 iframe {
     width: 100%;
@@ -288,7 +310,23 @@ label {
     margin: 0;
     overflow: hidden;
 }
-
+.left label{
+    border: 0.5px groove rgb(101, 101, 101);
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #000;
+}
+.right label{
+    border: 0.5px groove rgb(101, 101, 101);
+    margin-bottom: 5px;
+    border-radius: 8px;
+    background-color: #000;
+    color: #4DE1FF;
+}
+.right label svg{
+    background-color: white;
+    margin-right: 8px;
+}
 .label-text {
      /* flex: 1;  */
     /*display: flex; */
@@ -296,12 +334,11 @@ label {
     font-family: 'Segoe UI';
     font-weight: 800;
     font-size: 18px;
-    font-style: italic;
+    /* font-style: italic; */
     padding-left: 4px;
     /* border: 0.5px solid rgb(198, 198, 198);  */
-    /* background-color: #cdfff6; */
+    color: #4DE1FF;
     border-radius: 5px;
-
     width: fit-content;
 }
 
@@ -364,7 +401,7 @@ label {
 }
 .subscript{
     text-decoration: none;
-    color: #4A2C2A;
+    color: #F1F1F1;
     font-family: 'Segoe UI';
     font-size: 30px;
     font-weight: 800;
@@ -427,21 +464,22 @@ label {
     
 }
 .typewriter {
-    left: 200px;
+    left: 250px;
     overflow: hidden; 
     border-right: .15em solid #8f3802;
     white-space: nowrap; 
     letter-spacing: .15em; 
     animation: 
-    typing 1s steps(40, end),
+    typing 1.5s steps(40, end),
     blink-caret .75s step-end infinite;
+    
     
 }
 .about2{
         position: relative;
         height: 16%;
         width: 120%;
-        background-color: #f8eed0;
+        background-color: #2C2C2C;
         /* background-color: #FFE58F; */
 }
 .logo{
@@ -452,17 +490,21 @@ label {
 .logo h1{
     padding-right: 2px;
     font-family: 'Segoe UI';
-    color: #4A2C2A;
+    color: #F1F1F1;
 }
 .logo img{
     height: 40px;
     width: auto;
     vertical-align: middle;
+    background-color: #F1F1F1;
+    border-radius: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 .know{
     margin-left: 50px;
     font-family: 'Segoe UI';
-    color: #4A2C2A;
+    color: #F1F1F1;
     font-size: 18px;
     padding-top: 20px;
 }
@@ -482,7 +524,7 @@ label {
     margin-top: 20px;
     margin-left: 320px;
     font-family: 'Segoe UI';
-    color: #4A2C2A;
+    color: #F1F1F1;
     font-size: 18px;
 }
 .contactinfo a{
@@ -497,7 +539,7 @@ label {
     margin-top: 20px;
     margin-left: 380px;
     font-family: 'Segoe UI';
-    color: #4A2C2A;
+    color: #F1F1F1;
     font-size: 18px;
 }
 .userinfo a{
@@ -528,12 +570,14 @@ label {
     padding-left: 30px;
     font-family: 'Segoe UI';
     font-weight: 500;
+    color: #F1F1F1;
 }
 .def{
     padding: 25px;
     font-family: 'Segoe UI';
     font-size: 18px;
     text-align: justify;
+    color: #F1F1F1;
 }
 .def p{
     padding-bottom: 15px;
@@ -541,6 +585,7 @@ label {
 .contact{
     padding-left: 25px;
     font-family: 'Segoe UI';
+    color: #F1F1F1;
 }
 .contact h1{
     font-weight: 500;

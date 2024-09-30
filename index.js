@@ -10,7 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
+    function hide() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('loggedin') === 'true') {
+            const toHide = document.getElementById('login');
+            if (toHide) {
+                toHide.style.display = 'none';
+            }
+        }
+    }
     function removeThemeClasses() {
         const body = document.getElementById("body");
         const navbar = document.querySelector('.navbar');
@@ -53,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setActiveLink();
     loadTheme();
+    hide();
 
     document.querySelectorAll('.navbar a').forEach(link => {
         link.addEventListener('click', function() {

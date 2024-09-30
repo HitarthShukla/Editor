@@ -17,7 +17,8 @@ if (isset($_POST['submit'])) {
     if ($result->num_rows == 1) {
         // Login successful, start session
         $_SESSION['UserName'] = $username;
-        header("Location: learn.html");
+        $_SESSION['loggedIn'] = true;
+        header("Location: learn.php");
         exit();
     } else {
         // User does not exist or incorrect password
