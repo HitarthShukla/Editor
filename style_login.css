@@ -41,7 +41,7 @@ input{
     align-items: center;    
     justify-content: center;
     width: 95%;
-    margin-top: 20px;
+    margin-top: 18px;
     /* border: 0.1px solid rgb(173, 173, 173); */
     font-size: 20px;
     border-radius: 8px;
@@ -69,7 +69,7 @@ input{
     justify-content: center;
     margin-right: 8%;
 }
-#signup{
+#login input{
     text-align: center;
     align-items: center;    
     justify-content: center;

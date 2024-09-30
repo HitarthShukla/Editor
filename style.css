@@ -10,6 +10,7 @@ body {
     background-color: #FAF7F5;
     height: 1000px;
     transition: background-color 0.5s ease, color 0.5s ease;
+    overflow-x: hidden;
 }
 svg{
     height: 25px;
@@ -168,12 +169,12 @@ svg{
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.dark-theme {
+ /* .dark-theme {
     background-color: #1f1f1f;
     color: white;
     transition: background-color 0.5s ease, color 0.5s ease;
-}
-
+} */
+/*
 .dark-theme textarea {
     background-color: #3e3e42;
     color: azure;
@@ -185,11 +186,13 @@ svg{
     border: 2px solid blue;
     color: white;
     transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
-}
+} */
 
 .neon-theme {
     background-color: black;
     color: white;
+    font-family: 'Segoe UI';
+    font-weight: 500;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -206,26 +209,27 @@ svg{
 }
 
 .neon-navbar {
-    background: linear-gradient(45deg, #39ff14, #00bfff);
-    box-shadow: 0 0 10px #39ff14, 0 0 20px #00bfff;
+    /* background: linear-gradient(45deg, #39ff14, #00bfff); */
+    /* box-shadow: 0 0 10px #39ff14, 0 0 20px #00bfff; */
+    background-color: #1C1C1E;
     transition: background 0.5s ease, box-shadow 0.5s ease;
+    color: white;
 }
 
 .neon-nav-links a {
-    color: #39ff14;
-    text-shadow: 0 0 5px #39ff14, 0 0 10px #00bfff;
+    /* text-shadow: 0 0 5px #39ff14, 0 0 10px #00bfff; */
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .neon-nav-links a:hover {
-    background-color: #00bfff;
-    color: #fff;
+    background-color: #2C2C2E;
+    color: #007AFF;
     text-shadow: 0 0 5px #00bfff, 0 0 10px #39ff14;
 }
 
 .neon-nav-links a.active {
-    background-color: #39ff14;
-    color: blue;
+    background-color: #007AFF;
+    color: #007AFF;
     text-shadow: 0 0 5px blue, 0 0 10px #00bfff;
 }
 
@@ -329,10 +333,13 @@ label {
 }
 
 .imt {
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
     height: 800px;
     width: 100%;
     overflow: hidden; 
+    margin-left: 55px;
 }
 
 .bgimage {
@@ -345,40 +352,57 @@ label {
 }
 
 .bgimage2, .bgimage3, .bgimage4 {
-    position: absolute; 
+    /* position: absolute;  */
+    display: flex;
+    flex-direction: row;
+    margin-top: 300px;
+    margin-right: 130px;
+    padding: 0 50px;
     height: 30%; 
     width: auto;
     z-index: 11; 
 }
-
+.subscript{
+    text-decoration: none;
+    color: #4A2C2A;
+    font-family: 'Segoe UI';
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+}
 .bgimage2 {
     top: 10%;
     left: 75%;
+    transition: height 0.3s ease,  transform 0.3s ease;
 }
 
 .bgimage2:hover {
-    background-color: azure;
-    border-radius: 25px;
+    height: 33%;
+    width: auto;
+    transform: translate(-2%,-2%);
 }
 
 .bgimage3 {
     top: 40%;
-    left: 78%;
+    left: 75%;
+    transition: height 0.3s ease,  transform 0.3s ease;
 }
 
 .bgimage3:hover {
-    background-color: azure;
-    border-radius: 25px;
+    height: 33%;
+    width: auto;
+    transform: translate(-2%,-2%);
 }
 
 .bgimage4 {
     top: 70%;
-    left: 78%;
+    left: 75%;
+    transition: height 0.3s ease,  transform 0.3s ease;
 }
-
 .bgimage4:hover {
-    background-color: azure;
-    border-radius: 25px;
+    height: 33%;
+    width: auto;
+    transform: translate(-2%,-2%);
 }
 
 .typewriter {
@@ -389,33 +413,92 @@ label {
     color: #f4492b;
     font-family: 'Segoe UI';
     font-size: 60px;
+    
     /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     text-shadow: #6a6a6a 3px 3px 5px;
     padding: 5px; 
+    width: fit-content;
 }
-
+.type-text{
+    /* text-align: center; */
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    
+}
 .typewriter {
+    left: 200px;
     overflow: hidden; 
     border-right: .15em solid #8f3802;
     white-space: nowrap; 
     letter-spacing: .15em; 
     animation: 
-      typing 1s steps(40, end),
-      blink-caret .75s step-end infinite;
+    typing 1s steps(40, end),
+    blink-caret .75s step-end infinite;
+    
 }
-
 .about2{
         position: relative;
         height: 16%;
-        width: 100%;
-        background-color: rgb(7, 52, 86);
+        width: 120%;
+        background-color: #f8eed0;
+        /* background-color: #FFE58F; */
 }
-.line{
-        position: absolute;
-        top: 10%;
-        z-index: 100;
-        height: 5px;
-        width: 100%;
+.logo{
+    display: flex;
+    margin-left: 20px;
+    /* justify-content: center; */
+}
+.logo h1{
+    padding-right: 2px;
+    font-family: 'Segoe UI';
+    color: #4A2C2A;
+}
+.logo img{
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
+.know{
+    margin-left: 50px;
+    font-family: 'Segoe UI';
+    color: #4A2C2A;
+    font-size: 18px;
+    padding-top: 20px;
+}
+.know a{
+    text-decoration: none;
+    color: #f42b2b;
+}
+.contactus{
+    margin-top: 0px;
+    margin-left: 470px;
+}
+.info{
+    display: flex;
+    /* vertical-align: middle; */
+}
+.contactinfo{
+    margin-top: 20px;
+    margin-left: 320px;
+    font-family: 'Segoe UI';
+    color: #4A2C2A;
+    font-size: 18px;
+}
+.contactinfo a{
+    text-decoration: none;
+    color: #f42b2b;
+}
+.copyrights{
+    margin-top: 0px;
+    margin-left: 470px;
+}
+.copyinfo{
+    margin-top: 20px;
+    margin-left: 380px;
+    font-family: 'Segoe UI';
+    color: #4A2C2A;
+    font-size: 18px;
 }
 .userinfo a{
     text-decoration: none;
@@ -473,6 +556,15 @@ label {
 .id a:hover{
     color: orange;
 }
+.photo {
+    overflow: hidden;
+}
+
+.prof {
+    width: 155px;
+    height: auto;
+    transform: translate(-18px,-18px);
+}
 
 @keyframes typing {
     from { width: 0 }
@@ -481,6 +573,6 @@ label {
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: blue; }
+    50% { border-color: #E06C75; }
 }
 

@@ -30,9 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         removeThemeClasses();
 
-        if (theme === 'dark') {
-            body.classList.add('dark-theme');
-        } else if (theme === 'neon') {
+        if (theme === 'neon') {
             body.classList.add('neon-theme');
             navbar.classList.add('neon-navbar');
             navLinks.forEach(link => {
@@ -63,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector('.dropdown-content-appearance a[onclick="light()"]').addEventListener('click', () => applyTheme('light'));
-    document.querySelector('.dropdown-content-appearance a[onclick="dark()"]').addEventListener('click', () => applyTheme('dark'));
     document.querySelector('.dropdown-content-appearance a[onclick="neon()"]').addEventListener('click', () => applyTheme('neon'));
     const textarea = document.getElementById('html-code');
 
@@ -119,9 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-function dark() {
-    applyTheme('dark');
-}
 function light() {
     applyTheme('light');
 }
@@ -177,11 +171,6 @@ function ocjs() {
         jslogo.classList.remove('graycolor');
         jscode.style.display = "inline";
     }
-}
-function change1() {
-    // Optionally perform any checks here
-    window.open("login.html"); // Redirects to the login.html page
-    console.log("hafjf")
 }
 
 

@@ -17,12 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: Create_ac.html');
         exit();
     } else {
-        // Hash the password
-        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-
-        // Insert new user into the database
+        // Insert new user into the database without hashing
         $stmt = $conn->prepare("INSERT INTO userinfo (UserName, Password) VALUES (?, ?)");
-        $stmt->bind_param('ss', $username, $passwordHash);
+        $stmt->bind_param('ss', $username, $password);
 
         if ($stmt->execute()) {
             $_SESSION['UserName'] = $username;

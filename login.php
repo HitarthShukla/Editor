@@ -1,47 +1,29 @@
 <?php
+require('database.php');
 session_start();
-include 'database.php';
 
-// Decrypt function
-function decrypt($encryptedPassword) {
-    $encryption_key = "your_secret_key"; // Use a secure key
-    $iv = "your_initialization_vector"; // Ensure this matches your encryption method
-
-    return openssl_decrypt($encryptedPassword, 'AES-128-CBC', $encryption_key, 0, $iv);
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['submit'])) {
+    // Sanitize input
     $username = $_POST['UserName'];
     $password = $_POST['Password'];
 
-    $stmt = $conn->prepare("SELECT * FROM userinfo WHERE UserName = ?");
-    if (!$stmt) {
-        die("Prepare failed: " . $conn->error);
-    }
-
-    $stmt->bind_param('s', $username);
+    // Check if the user exists in the database
+    $query = "SELECT * FROM `userinfo` WHERE UserName=? AND Password=?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param('ss', $username, $password);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-        // Decrypt the stored password
-        $decryptedPassword = decrypt($user['Password']);
-        
-        // Verify the decrypted password
-        if ($decryptedPassword === $password) {
-            $_SESSION['UserName'] = $user['UserName'];
-            header('Location: learn.html');
-            exit();
-        } else {
-            $_SESSION['error'] = 'Invalid username or password.';
-            header('Location: home.html');
-            exit();
-        }
-    } else {
-        $_SESSION['error'] = 'Invalid username or password.';
-        header('Location: connect.html');
+    if ($result->num_rows == 1) {
+        // Login successful, start session
+        $_SESSION['UserName'] = $username;
+        header("Location: learn.html");
         exit();
+    } else {
+        // User does not exist or incorrect password
+        echo "<script> alert('Please Enter Valid Username or Password');
+                        window.location.href = 'login.html' </script>";
+        
     }
 }
 ?>
