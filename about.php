@@ -59,6 +59,7 @@ echo "<script>
                 <a href="Create_ac.html">Sign Up</a>
             </button>
         </div>
+        <div class="photoholder"><img src="prof.jpg" id="prof2"></div>
     </nav>
     <main>
         <div class="head">

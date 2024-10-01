@@ -44,20 +44,6 @@ echo "<script>
             <li><a href="editor.php">Editor</a></li>
             <li><a href="profile.php">Profile</a></li>
             <li><a href="learn.php">Learn</a></li>
-            <li class="settings-dropdown">
-                <span>Settings</span>
-                <ul class="dropdown-content">
-                    <li class="appearance-dropdown">
-                        <span>Appearance</span>
-                        <ul class="dropdown-content-appearance">
-                            <li><a onclick="light()">Light</a></li>
-                            <li><a onclick="neon()">Dark</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="general.html">General</a></li>
-                    <li><a href="preferences.html">Preferences</a></li>
-                </ul>
-            </li>
             <li><a href="connect.php">Connect</a></li>
             <li><a href="about.php">About</a></li>
         </ul>
@@ -69,12 +55,13 @@ echo "<script>
                 <a href="Create_ac.html">Sign Up</a>
             </button>
         </div>
+        <div class="photoholder"><img src="prof.jpg" id="prof2"></div>
     </nav>
     <div class="progress">
         <div class="user">
             <div class="photo"><img src="prof.jpg" class="prof"/></div>
         </div>
-        <div class="user1"><p>Username</p></div>
+        <div class="user1"><p class="editname">Username</p></div>
         <div class="main-bar">
             <div class="main-bar-progress"></div>
         </div>
