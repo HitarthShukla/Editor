@@ -1,0 +1,11 @@
+def sort_descending():
+    size = int(input("Enter the size of the list: "))
+    user_list = []
+    for i in range(size):
+        num = float(input(f"Enter number {i + 1}: "))
+        user_list.append(num)
+    user_list.sort(reverse=True)
+    return user_list
+
+sorted_list = sort_descending()
+print("Sorted list in descending order:", sorted_list)

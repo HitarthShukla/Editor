@@ -3,15 +3,27 @@ session_start();
 
 if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
     // User is logged in, proceed with your code
-    
-    echo "<script>
+    $username =  $_SESSION['UserName'];
+echo "<script>
       document.addEventListener('DOMContentLoaded', function() {
           const userDetails = document.getElementsByClassName('userinfo')[0];
+          const photoholder = document.getElementsByClassName('photoholder')[0];
+          var editname = document.getElementsByClassName('editname')[0];
+          var USERname = '" . $username. "';
+
           if (userDetails) {
               userDetails.style.display = 'none';
+              photoholder.style.display = 'inline';
+              
+              if (editname) {
+                  editname.innerText = USERname; // Only set text if element is found
+              } else {
+                  console.error('Element with class editname not found.');
+              }
           }
       });
       </script>";
+
 
 }
 ?>
@@ -56,6 +68,7 @@ if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
                 <a href="Create_ac.html">Sign Up</a>
             </button>
         </div>
+        <div class="photoholder"><img src="prof.jpg" id="prof2"></div>
     </nav>
     <div class="imt">
         <!-- <img src="BG.jpg" class="bgimage" alt="back"/> -->
@@ -102,7 +115,7 @@ if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
         </div>
     </div>
     </div>
-    
-    <script src="index.js"></script>
+    <script src="index.js">
+    </script>
 </body>
 </html>

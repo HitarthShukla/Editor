@@ -272,26 +272,26 @@
 }
 
 @keyframes main-loading {
-    from {width: 0;}
-    to {width: 80%;}
+    0% {width: 0;
+    background-color: red;}
+    50% {
+        background-color: yellow;}
+    100% {width: 80%;
+    background-color: greenyellow;}
 }
 
 @keyframes beginner-loading {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+    0% {width: 0;
+        background-color: red;}
+        100% {width: 100%;
+        background-color:lime;}
 }
 
 @keyframes intermediate-loading {
-    from {
-        width: 0;
-    }
-    to {
-        width: 50%;
-    }
+    0% {width: 0;
+        background-color: red;}
+        100% {width: 50%;
+        background-color: yellow;}
 }
 
 @keyframes advanced-loading {
@@ -301,4 +301,8 @@
     to {
         width: 10%;
     }
+}
+
+.courselink {
+    text-decoration: none;
 }

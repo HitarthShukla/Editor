@@ -280,7 +280,7 @@ textarea {
     color: white;
 }
 #output{
-    background-color: rgb(229, 240, 242);
+    background-color: white;
     color-scheme: white;
 }
 
@@ -621,3 +621,20 @@ label {
     50% { border-color: #E06C75; }
 }
 
+.userinfo {
+    margin-left: auto;
+}
+
+.photoholder {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: none;
+}
+
+#prof2 {
+    height: 60px;
+    transform: translate(-10px,-10px);
+    width: auto;
+}
