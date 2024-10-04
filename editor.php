@@ -1,41 +1,37 @@
 <?php
 session_start();
-
 if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
     // User is logged in, proceed with your code
     $username =  $_SESSION['UserName'];
 echo "<script>
+    document.querySelectorAll('.copy-link').forEach(link => {
       document.addEventListener('DOMContentLoaded', function() {
           const userDetails = document.getElementsByClassName('userinfo')[0];
           const photoholder = document.getElementsByClassName('photoholder')[0];
           var editname = document.getElementsByClassName('editname')[0];
           var USERname = '" . $username. "';
-
           if (userDetails) {
               userDetails.style.display = 'none';
               photoholder.style.display = 'inline';
-              
               if (editname) {
                   editname.innerText = USERname; // Only set text if element is found
               } else {
                   console.error('Element with class editname not found.');
               }
           }
-      });
+}});
       </script>";
-
-
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CodynLrn</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CodynLrn</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
         body{
             height: 700px;
         }
@@ -59,9 +55,8 @@ echo "<script>
                 <a href="Create_ac.html">Sign Up</a>
             </button>
         </div>
-        <div class="photoholder"><img src="prof.jpg" id="prof2"></div>
+        <div class="photoholder"><a href="profile.php"><img src="prof.jpg" id="prof2"></a></div>
     </nav>
-    
     <main>
         <div class="container">
             <div class="left">
@@ -95,10 +90,11 @@ echo "<script>
             <div class="right">
                 <label><svg height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m3 4.60441299v10.68046321c0 .9664983.78350169 1.75 1.75 1.75.30213089 0 .5991154-.0782213.86204688-.2270505l10.10829552-5.7216767c.8411018-.4760954 1.136998-1.54389461.6609027-2.38499639-.1736118-.30671412-.4357881-.55386079-.7522058-.70908458l-10.10829556-4.95878651c-.86771195-.42567001-1.91620519-.06732422-2.34187521.80038773-.11768194.23989013-.17886853.50354286-.17886853.77074374z" fill="#212121"/></svg>Output</label>
                 <iframe id="output">
-                </iframe>
+                    </iframe>
+                </div>
             </div>
-        </div>
-    </main>
-    <script src="index.js"></script>
-</body>
-</html>
+        </main>
+        <script src="index.js"?v=1.0></script>
+    </body>
+    </html>
+    

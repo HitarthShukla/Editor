@@ -1,11 +1,11 @@
 .progress {
     height: 20%;
     width: 70%;
-    background-color: #ffffff;
+    background-color: #2C2C2C;
     margin: 0 auto;
     margin-top: 40px;
     border-radius: 25px;
-    color: #1f1f1f;
+    color: #F1F1F1;
 }
 
 .box {
@@ -240,9 +240,11 @@
 }
 
 .user1 {
-    transform: translate(42px,-15px);
+    transform: translate(42px,25px);
     font-size: xx-large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Segoe UI';
+    padding-left: 20px;
+    font-weight: 600;
 }
 
 .main-bar {
@@ -266,9 +268,9 @@
 
 .maintext {
     font-size: 40px;
-    color: #1f1f1f;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    transform: translate(240px,-165px);
+    color: #F1F1F1;
+    font-family: 'Segoe UI';
+    transform: translate(240px,-175px);
 }
 
 @keyframes main-loading {

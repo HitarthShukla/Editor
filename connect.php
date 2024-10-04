@@ -27,6 +27,7 @@ echo "<script>
 
 }
 ?>
+<script src="index.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,6 +57,13 @@ echo "<script>
         </div>
         <div class="photoholder"><img src="prof.jpg" id="prof2"></div>
     </nav>
-    <script src="index.js"></script>
+    <img src="image1.png" id="img1">
+    <img src="image2.png" id="img2">
+    <img src="image3.png" id="img3">
+    <!-- <img src="image4.png" id="img4"> -->
+    <img src="image5.png" id="img5">
+    <div class="message">
+        <h1>Coming Soon</h1>
+    </div>
 </body>
 </html>

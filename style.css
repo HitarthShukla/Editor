@@ -85,14 +85,14 @@ svg{
     cursor: pointer;
 }
 .userinfo a:hover{
-    color: #f42b2b;
+    color: #4DE1FF;
 }
 .userinfo button:hover{
     height: 35px;
     align-items: center;
-    /* background: blue; */
-    background-color: #FFE58F;
+    background-color: #1f1f1f;
     padding: 3px 10px;
+    color: #4DE1FF;
     margin: 5px;
     width: auto;
     overflow: hidden;
@@ -351,7 +351,7 @@ label {
 
 .copy-link, .paste-link {
     /* background-color: blue; */
-    background-color: #f15555;
+    background-color: #2C2C2C;
     border: 0.5px solid rgb(194, 194, 194);
     border-radius: 20px;
     color: white;
@@ -364,9 +364,9 @@ label {
 
 .copy-link:hover, .paste-link:hover {
     /* background-color: azure; */
-    background-color: white;
+    background-color: black;
     /* color: blue; */
-    color: #f42b2b;
+    color: #4DE1FF;
 }
 
 .imt {
@@ -376,7 +376,7 @@ label {
     height: 800px;
     width: 100%;
     overflow: hidden; 
-    margin-left: 55px;
+    margin-left: 119px;
 }
 
 .bgimage {
@@ -393,7 +393,9 @@ label {
     display: flex;
     flex-direction: row;
     margin-top: 300px;
-    margin-right: 130px;
+    margin-right: 100px;
+    margin-left: 0px;
+    /* transform: translate(-50px,-10px); */
     padding: 0 50px;
     height: 30%; 
     width: auto;
@@ -404,6 +406,7 @@ label {
     color: #F1F1F1;
     font-family: 'Segoe UI';
     font-size: 30px;
+    /* transform: translate(-10px,-10px); */
     font-weight: 800;
     text-align: center;
 }
@@ -459,7 +462,7 @@ label {
 .type-text{
     /* text-align: center; */
     display: flex;
-    width: fit-content;
+    width: 50%;
     justify-content: center;
     
 }
@@ -610,17 +613,6 @@ label {
     height: auto;
     transform: translate(-18px,-18px);
 }
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #E06C75; }
-}
-
 .userinfo {
     margin-left: auto;
 }
@@ -637,4 +629,51 @@ label {
     height: 60px;
     transform: translate(-10px,-10px);
     width: auto;
+}
+#img1 {
+    height: 300px;
+    width: auto;
+    transform: translate(10px,-30px);
+    margin-right: 50px;
+}
+#img2 {
+    height: 170px;
+    width: auto;
+    transform: translate(80px,-80px);
+}
+#img3 {
+    height: 300px;
+    width: auto;
+    transform: translate(200px,-10px);
+}
+/* #img4 {
+    height: 300px;
+    width: auto;
+} */
+#img5 {
+    height: 250px;
+    width: auto;
+    transform: translate(-980px,300px);
+}
+.message h1{
+    color: #F1F1F1;
+    font-size: 80px;
+    transform: translate(600px, 150px);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #E06C75; }
+}
+.photoholder2 {
+    overflow: hidden;
+    width: 119px;
+    height: 119px;
+    border-radius: 50%;
+    /* transform: translate(-18px,-18px); */
 }

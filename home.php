@@ -10,7 +10,6 @@ echo "<script>
           const photoholder = document.getElementsByClassName('photoholder')[0];
           var editname = document.getElementsByClassName('editname')[0];
           var USERname = '" . $username. "';
-
           if (userDetails) {
               userDetails.style.display = 'none';
               photoholder.style.display = 'inline';
@@ -23,10 +22,9 @@ echo "<script>
           }
       });
       </script>";
-
-
 }
 ?>
+<script src="index.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,30 +52,29 @@ echo "<script>
                 <a href="Create_ac.html">Sign Up</a>
             </button>
         </div>
-        <div class="photoholder"><img src="prof.jpg" id="prof2"></div>
+        <div class="photoholder"><a href="profile.php"><img src="prof.jpg" id="prof2"></a></div>
     </nav>
     <div class="imt">
         <!-- <img src="BG.jpg" class="bgimage" alt="back"/> -->
-        <a href="editor.html" class="subscript">
+        <a href="editor.php" class="subscript">
             <img src="code.png" class="bgimage2" alt="back2"/>Let's Code
         </a>
-        <a href="learn.html" class="subscript">
+        <a href="learn.php" class="subscript">
             <img src="elearn.png" class="bgimage3" alt="back3"/>Let's Learn
         </a>
-        <a href="connect.html" class="subscript">
+        <a href="connect.php" class="subscript">
             <img src="econnect.png" class="bgimage4" alt="back4"/>Let's Connect
         </a>
-        <div class="type-text">
-            <div class="typewriter">
+    <div class="type-text">
+        <div class="typewriter">
                 <!-- <p>Welcome To Code And Learn</p> -->
                 <font color = "#569CD6">Welcome</font>
                 <font color ="#DCDCAA">To</font>
                 <font color ="#D69D85 ">Code</font>
                 <font color ="#B5CEA8">And</font>
                 <font color ="#E06C75">Learn</font>
-            </div>
         </div>
-        
+    </div>
     </div>
     <div class="about2">
         <div class="logo">
@@ -91,7 +88,7 @@ echo "<script>
         </div>
         <div class="info">
         <div class="know">
-            To Know more about us <a href="about.html">Click Here</a>
+            To Know more about us <a href="about.php">Click Here</a>
         </div>
         <div class="contactinfo">
             email: &nbsp;<a href="/">codynlrn@gmail.com</a>
@@ -101,7 +98,5 @@ echo "<script>
         </div>
     </div>
     </div>
-    <script src="index.js">
-    </script>
 </body>
 </html>

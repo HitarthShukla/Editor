@@ -27,6 +27,7 @@ echo "<script>
 
 }
 ?>
+<script src="index.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +56,7 @@ echo "<script>
                 <a href="Create_ac.html">Sign Up</a>
             </button>
         </div>
-        <div class="photoholder"><img src="prof.jpg" id="prof2"></div>
+        <div class="photoholder"><a href="profile.php"><img src="prof.jpg" id="prof2"></a></div>
     </nav>
     <main>
     <div class="profile">
@@ -138,6 +139,5 @@ echo "<script>
     </div>
     <div class="photos"></div>
     </main>
-    <script src="index.js"></script>
 </body>
 </html>

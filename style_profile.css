@@ -10,9 +10,9 @@
     text-align: center;
     padding: 25px;
     font-family: 'Segoe UI';
-    font-size: 20px;
-    color: #4A2C2A;
-    background-color: white;
+    font-size: 22px;
+    color: #F1F1F1;
+    background-color: #2C2C2C;
     border: 0.5px solid rgb(235, 235, 235);
     border-radius: 10px;
 }
@@ -27,7 +27,10 @@
 }
 .name{
     padding-top: 20px;
-    font-size: 25px;
+    font-size: 28px;
+    color: #F1F1F1;
+    font-weight: 700;
+    padding-bottom: 20px;
 }
 .share{
     height: 50px;
@@ -71,8 +74,11 @@
     width: 1000px;
     font-family: 'Segoe UI';
     font-size: 25px;
-    color: #4A2C2A;
-    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #F1F1F1;
+    background-color: #2C2C2C;
+    font-weight: 700;
     border: 0.5px solid rgb(235, 235, 235);
     border-radius: 10px;
 }
@@ -80,45 +86,47 @@
     margin-top: 200px;
     height: 200px;
     width: 1000px;
+    padding-left: 10px;
     font-family: 'Segoe UI';
     font-size: 25px;
-    color: #4A2C2A;
-    background-color: white;
+    color: #F1F1F1;
+    background-color: #2C2C2C;
     border: 0.5px solid rgb(235, 235, 235);
     border-radius: 10px;
 }
 .css, .js{
     margin-top: 40px;
     height: 200px;
+    padding-left: 10px;
     width: 1000px;
     font-family: 'Segoe UI';
     font-size: 25px;
-    color: #4A2C2A;
-    background-color: white;
+    color: #F1F1F1;
+    background-color: #2C2C2C;
     border: 0.5px solid rgb(235, 235, 235);
     border-radius: 10px;
 }
 
 #html-beginner, #html-intermediate, #html-advanced {
     font-size: 25px;
-    font-weight: bolder;
-    color: #1f1f1f;
+    font-weight: 600;
+    color: #F1F1F1;
     margin-top: 5%;
     margin-left: 15px;
  }
 
  #css-beginner, #css-intermediate, #css-advanced {
     font-size: 25px;
-    font-weight: bolder;
-    color: #1f1f1f;
+    color: #F1F1F1;
     margin-top: 5%;
+    font-weight: 600;
     margin-left: 15px;
  }
 
  #js-beginner, #js-intermediate, #js-advanced {
     font-size: 25px;
-    font-weight: bolder;
-    color: #1f1f1f;
+   font-weight: 600;
+    color: #F1F1F1;
     margin-top: 5%;
     margin-left: 15px;
  }
