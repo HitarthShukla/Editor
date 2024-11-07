@@ -28,6 +28,7 @@
             border-radius: 20px;
             box-shadow: red 3px 3px 10px;
             transform: translate(60%,0);
+            display: none;
         }
 
         h1 {
@@ -73,7 +74,7 @@
         }
 
         .hide{
-            display: none;
+            display: inline;
         }
     </style>
 </head>
@@ -111,6 +112,7 @@
                 <div class="modules">
                     <ul>
                         <li><a href="#"  onclick="chapterdisplay1()">Module 1</a></li>
+                        <li><a href="#"  onclick="quizDisplay1()">Quiz 1</a></li>
                         <li><a href="#"  onclick="chapterdisplay2()">Module 2</a></li>
                     </ul>
                 </div>
@@ -187,14 +189,14 @@ Most pages on the Web today were built using either HTML 4.01 or XHTML 1.0. Howe
 ->So where to write the code of HTML and Where to run it?
 the answer of the above question is, today in the world of tech there are so many software,text editors and IDE for the different languages. but we can use the simple Notepad for the HTML codes and will run it in the chrome. other option is to run on the IDE 's like Visual Studio code, etc.we can go to google, type VS code and install it. 
             </xmp>
-            <div class="quizcontainer">
-                <h1>Module-1 Quiz</h1>
-                <div id="quiz"></div>
-                <div id="result" class="result"></div>
-                <button id="submit" class="button">Submit</button>
-                <button id="retry" class="button hide">Retry</button>
-                <button id="showAnswer" class="button hide">Show Answer</button>
-            </div>
+        </div>
+        <div class="quizcontainer">
+            <h1>Module-1 Quiz</h1>
+            <div id="quiz"></div>
+            <div id="result" class="result"></div>
+            <button id="submit" class="button">Submit</button>
+            <button id="retry" class="button hide">Retry</button>
+            <button id="showAnswer" class="button hide">Show Answer</button>
         </div>
         <div class="chapter3">
             <xmp>

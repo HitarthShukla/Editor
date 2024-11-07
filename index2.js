@@ -6,6 +6,18 @@ const chapter5 = document.getElementsByClassName("chapter5")[0];
 const chapter6 = document.getElementsByClassName("chapter6")[0];
 const chapter7 = document.getElementsByClassName("chapter7")[0];
 const chapter8 = document.getElementsByClassName("chapter8")[0];
+const quizcontainer = document.getElementsByClassName("quizcontainer")[0];
+function quizDisplay1(){
+    quizcontainer.style.display = 'inline';
+    chapter1.style.display = 'none';
+    chapter2.style.display = 'none';
+    chapter3.style.display = 'none';
+    chapter4.style.display = 'none';
+    chapter5.style.display = 'none';
+    chapter6.style.display = 'none';
+    chapter7.style.display = 'none';
+    chapter8.style.display = 'none';
+}
 function chapterdisplay1() {
     chapter1.style.display = 'inline';
     chapter2.style.display = 'inline';
@@ -15,6 +27,7 @@ function chapterdisplay1() {
     chapter6.style.display = 'none';
     chapter7.style.display = 'none';
     chapter8.style.display = 'none';
+    quizcontainer.style.display = 'none';
 }
 function chapterdisplay2() {
     chapter1.style.display = 'none';
@@ -25,6 +38,7 @@ function chapterdisplay2() {
     chapter6.style.display = 'none';
     chapter7.style.display = 'none';
     chapter8.style.display = 'none';
+    quizcontainer.style.display = 'none';
 }
 function chapterdisplay3() {
     chapter1.style.display = 'none';
@@ -35,6 +49,7 @@ function chapterdisplay3() {
     chapter6.style.display = 'inline';
     chapter7.style.display = 'none';
     chapter8.style.display = 'none';
+    quizcontainer.style.display = 'none';
 }
 function chapterdisplay4() {
     chapter1.style.display = 'none';
@@ -45,6 +60,7 @@ function chapterdisplay4() {
     chapter6.style.display = 'none';
     chapter7.style.display = 'inline';
     chapter8.style.display = 'none';
+    quizcontainer.style.display = 'none';
 }
 function chapterdisplay5() {
     chapter1.style.display = 'none';
@@ -55,6 +71,7 @@ function chapterdisplay5() {
     chapter6.style.display = 'none';
     chapter7.style.display = 'none';
     chapter8.style.display = 'inline';
+    quizcontainer.style.display = 'none';
 }
 
 const quizData = [
