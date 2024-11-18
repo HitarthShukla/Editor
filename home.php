@@ -41,7 +41,7 @@ echo "<script>
             <li><a href="editor.php">Editor</a></li>
             <li><a href="profile.php">Profile</a></li>
             <li><a href="learn.php">Learn</a></li>
-            <li><a href="connect.php">Connect</a></li>
+            <li><a href="connect">Connect</a></li>
             <li><a href="about.php">About</a></li>
         </ul>
         <div class="userinfo">

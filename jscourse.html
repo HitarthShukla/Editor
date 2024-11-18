@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodynLrn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jscourse.css">
+</head>
+<style>
+.nav-links a{
+    font-family: 'Segoe UI';
+    font-weight: 500;
+}
+#learn{
+    color: #4DE1FF;
+}
+.chapter1, .chapter2, .chapter3, .chapter4, .chapter5, .chapter6, .chapter7, .chapter8 {
+    display: none;
+    word-wrap: break-word;
+}
+.quizcontainer {
+    width: 450px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    /* background-color: #1f1f1f; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    border-radius: 20px;
+    /* box-shadow: red 3px 3px 10px; */
+    transform: translate(60%,0);
+    display: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+.question {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: azure;
+}
+
+.options {
+    margin-bottom: 20px;
+}
+
+.option {
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 100px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #428bca;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #3071a9;
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.hide{
+    display: inline;
+}
+</style>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="home.php">Home</a></li>
+            <li><a href="editor.php">Editor</a></li>
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="learn.php" id="learn">Learn</a></li>
+            <li><a href="connect.php">Connect</a></li>
+            <li><a href="about.php">About</a></li>
+        </ul>
+        <div class="userinfo">
+            <button id="login">
+                <a href="login.html">Login</a>
+            </button>
+            <button id="signup">
+                <a href="Create_ac.html">Sign Up</a>
+            </button>
+        </div>
+        <div class="photoholder"><a href='profile.php'><img src="prof.jpg" id="prof2"></a></div>
+    </nav>
+    <div class="left">
+        <div class="left-content">
+        <div class="html-logo">
+            <img src="jslogo.png" alt="">
+        </div>
+        <div class="line">
+            Let's Learn JavaScript
+        </div>
+        <div class="levels">
+            <div class="beginner">
+                Beginner
+                <div class="modules">
+                    <ul>
+                        <li><a href="#"  onclick="chapterdisplay1()">Module 1</a></li>
+                        <li><a href="#"  onclick="quizDisplay1()">Quiz 1</a></li>
+                        <li><a href="#"  onclick="chapterdisplay2()">Module 2</a></li>
+                        <li><a href="#"  onclick="quizDisplay2()">Quiz 2</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="intermediate">
+                Intermediate
+                <div class="modules">
+                    <ul>
+                        <li><a href="#"  onclick="chapterdisplay3()">Module 3</a></li>
+                        <li><a href="#"  onclick="quizDisplay3()">Quiz 3</a></li>
+                        <li><a href="#"  onclick="chapterdisplay4()">Module 4</a></li>
+                        <li><a href="#"  onclick="quizDisplay4()">Quiz 4</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="advance">
+                Advanced    
+                <div class="modules">
+                    <ul>
+                        <li><a href="#"  onclick="chapterdisplay5()">Module 5</a></li>
+                        <li><a href="#"  onclick="quizDisplay5()">Quiz 5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="right">
+    <div class="main">
+        
+        <font color = "#E06C75"><div class="title">Welcome to the course have a great learning</div></font>
+        <div class="chapter1">
+            <div class="title">Module 1</div>
+            <xmp>
+                Chapter 1 Intoduction to the JavaScript
+
+JavaScript is a versatile scripting language primarily used to create dynamic and interactive web pages. It's one of the core technologies of the web, alongside HTML and CSS. While HTML structures web pages, CSS styles them, and JavaScript brings them to life.
+History of JavaScript:
+•	Birth (1995): Brendan Eich, a programmer at Netscape Communications, created JavaScript in just 10 days. Initially named "Mocha," it was later renamed "LiveScript" and finally "JavaScript" to capitalize on the popularity of Java.
+•	Early Adoption: Netscape Navigator, a popular web browser at the time, was the first to implement JavaScript. Its ease of use and ability to add interactivity to web pages quickly made it a popular choice among developers.
+•	Standardization (1997): To ensure consistency across different browsers, JavaScript was standardized as ECMAScript. This standardization effort has continued, leading to the development of newer versions of ECMAScript, each with new features and improvements.
+•	Server-Side JavaScript (Node.js): In recent years, JavaScript has expanded beyond the browser. Node.js, a platform built on Chrome's V8 JavaScript engine, enables developers to use JavaScript to build server-side applications.
+•	Modern JavaScript: With the advent of modern frameworks like React, Angular, and Vue.js, JavaScript has become a powerful tool for building complex web applications. It's also used in game development, mobile app development, and more.
+Key Features of JavaScript:
+•	Client-Side Scripting: JavaScript can be executed directly in the user's web browser, allowing for dynamic interactions without requiring server-side processing.
+•	Object-Oriented Programming: JavaScript supports object-oriented concepts like classes, objects, inheritance, and polymorphism.
+•	Functional Programming: JavaScript also embraces functional programming paradigms, enabling developers to write concise and elegant code.
+•	Asynchronous Programming: JavaScript's asynchronous nature allows for non-blocking operations, making it ideal for handling tasks like network requests and user input without freezing the user interface.
+In Summary:
+JavaScript has evolved from a simple scripting language to a powerful tool for building complex web applications. Its flexibility, versatility, and widespread adoption have made it an essential skill for modern web developers.
+What is ECMAScript? 
+ECMAScript is a standard for scripting languages, including JavaScript, JScript, and ActionScript. It is best known as a JavaScript standard intended to ensure the interoperability of web pages across different web browsers. It is standardized by Ecma International in the document ECMA-262.
+
+How can we execute Javascript?
+
+Javascript can be executed right inside ones’s browser. You can open the javascript console and start writing javascript there.
+Another way to execute javascript is a runtime like node.js which can be installed and used to run javascript code.
+Yet another way to execute javascript is by inserting it inside <script> tag of an HTML document.
+
+            </xmp>
+        </div>
+        <div class="chapter2">
+            <xmp>
+                Chapter 2- Variables and Data
+
+Just like we follow some rules while Speaking english (the grammar), we have some rules to follow while writing a Called javascript program. The set of these rules is called syntax in javascript.
+What is Variable?
+A variable is like a named box that you can use to store information in a computer program.
+Think of it as a container that can hold different values, such as numbers, text, or other data. You can give the container a name, and then use that name to access the value inside.
+For example:
+Imagine you want to store a person's age. You could create a variable named age and assign the value 25 to it:
+
+Rules for choosing variable names:
+
+•	Letters digits, underscores & $ sign allowed.
+•	Must begin with a $, _or a letter
+
+•	JavaScript reserved words cannot be used as a variable name #Harry & hally are different variable (case sensitive)
+Var vs let in Javascript
+•	var is globally scoped while let & const are block scoped
+•	Var can be updated & re-declared within its scope
+•	let can be updated but not re-declared
+•	const can neither be updated nor be re-declared.
+•	var variables are initialized with undefined whereas let and const variables are not initialized. 
+•	const must be initialized during declaration unlike let and var
+
+Primitive Data Types & Objects:
+Primitive Data Types are a  set of basic data types in javascript
+Object is a non primitive datatype in javascript.
+These are the 7 primitive datatypes in javascript:
+Null
+Number
+String
+Symbol
+Undefined
+Boolean
+Biglnt
+ 	Object
+An object in Javascript can be created as follows.
+Const item={
+name: "Led Bulb", 
+price: "150"
+}
+Quick Quiz: Write a JavaScript program to store name, phone number and marks of a student using objects.
+</xmp>
+        </div>
+        <div class="quizcontainer">
+            <h1>Module-1 Quiz</h1>
+            <div id="quiz"></div>
+            <div id="result" class="result"></div>
+            <button id="submit" class="button">Submit</button>
+            <button id="retry" class="button hide">Retry</button>
+            <button id="showAnswer" class="button hide">Show Answer</button>
+        </div>
+        <div class="chapter3">
+            <div class="title"> Module 2</div>
+            <xmp>
+                Chapter 3 Expressions and Conditionals
+
+A fragment of code that produces a value is called an expression Every value writen literally is an expression for ex: 77 or "Harry"
+Operators in Javascript :
+
+1.	Arithmetic Operators:
+
++Addition
+-Subtraction
+*Multiplication
+**Exponentiation
+/Division
+%Modulus
+++Increment
+--Decrement
+ 2.Assignment Operators
+
+=x = y
+
+十= x=x+y
+
+一= x=x-y
+
+*=  x = x*y
+
+/=  x = x/y
+
+%=  X = X% y
+
+**= x = x * y
+3.	Comparison operators
+
+== equal to
+!= not equal
+===equal value and type
+!== not equal value or not equal type
+>greater than
+
+<less than
+>=greater than or equal to
+<=less than or equal to
+? ternary operator
+
+4.	Logical operators
+
+&&logical and 
+|| logical or 
+!logical not
+
+Apart from these, we also have type and bitwise operators. Bitwise operators perform bit by bit operations on numbers
+ 7+8=15
+Operand operator operand=result
+Comments in Javascript:
+
+ Sometimes we want our programs to contain a text which is not executed by the JS Engine
+Such a text called Comment Javascript
+A comment in Javascript can be written as follows:
+let a=2;
+Il this is a single line Comment
+/*
+I Am multiline Comment
+*/
+
+Sometimes comments are used to prevent the execution of some lines of of code
+let switch = true;
+// Switch = false
+Commented line wont execute
+Conditional statements:
+Conditional statements in programming are used to control the flow of a program based on certain conditions. These statements allow the execution of different code blocks depending on whether a specified condition evaluates to true or false, providing a fundamental mechanism for decision-making in algorithms. In this article, we will learn about the basics of Conditional Statements along with their different types.
+What are Conditional Statements in Programming?
+Conditional statements in Programming, also known as decision-making statements, allow a program to perform different actions based on whether a certain condition is true or false. They form the backbone of most programming languages, enabling the creation of complex, dynamic programs.
+5 Types of Conditional Statements in Programming
+Conditional statements in programming allow the execution of different pieces of code based on whether certain conditions are true or false. Here are five common types of conditional statements:
+1. If Conditional Statement:
+The if statement is the most basic form of conditional statement. It checks if a condition is true. If it is, the program executes a block of code.
+Syntax of If Conditional Statement:
+if (condition) {
+    // code to execute if condition is true
+}
+if condition is true, the if code block executes. If false, the execution moves to the next block to check.
+Use Cases of If Conditional Statement:
+•	Checking a single condition and executing code based on its result.
+•	Performing actions based on user input.
+Applications of If Conditional Statement:
+•	Validating user inputs.
+•	Basic decision-making in algorithms.
+Advantages of If Conditional Statement:
+•	Simple and straightforward.
+•	Useful for handling basic decision logic.
+Disadvantages of If Conditional Statement:
+•	Limited to checking only one condition at a time.
+•	Not suitable for complex decision-making.
+Implementation of If Conditional Statement:
+function main() {
+    let x = 10;
+
+    // Check if x is greater than 0
+    if (x > 0) {
+        console.log("x is positive"); // Print a message if x is positive
+    }
+}
+
+// Call the main function
+main();
+
+Output
+x is positive
+2. If-Else Conditional Statement:
+The if-else statement extends the if statement by adding an else clause. If the condition is false, the program executes the code in the else block.
+Syntax of If-Else Conditional Statement:
+if (condition) {
+    // code to execute if condition is true
+} else {
+    // code to execute if condition is false
+}
+if condition is true, the if code block executes. If false, the execution moves to the else block.
+Use Cases of If-Else Conditional Statement:
+•	Executing one block of code if a condition is true and another block if it's false.
+•	Handling binary decisions.
+Applications of If-Else Conditional Statement:
+•	Error handling: For example, displaying an error message if user input is invalid.
+•	Program flow control: Directing program execution based on conditions.
+Advantages of If-Else Conditional Statement:
+•	Handles binary decisions efficiently.
+•	Clear and concise syntax.
+Disadvantages of If-Else Conditional Statement:
+•	Limited to binary decisions.
+•	May become verbose in complex scenarios.
+Implementation of If-Else Conditional Statement:
+C++JavaPythonC#JavaScript
+// Main function
+function main() {
+    // Define the value of x
+    const x = -10;
+
+    // Check if x is greater than 0
+    if (x > 0) {
+        console.log("x is positive");
+    } else {
+        console.log("x is not positive");
+    }
+}
+
+// Call the main function to execute the program
+main();
+
+Output
+x is not positive
+3. if-Else if Conditional Statement:
+The if-else if statement allows for multiple conditions to be checked in sequence. If the if condition is false, the program checks the next else if condition, and so on.
+Syntax of If-Else if Conditional Statement:
+if (condition1) {
+    // code to execute if condition1 is true
+} else if (condition2) {
+    // code to execute if condition2 is true
+} else {
+    // code to execute if all conditions are false
+}
+In else if statements, the conditions are checked from the top-down, if the first block returns true, the second and the third blocks will not be checked, but if the first if block returns false, the second block will be checked. This checking continues until a block returns a true outcome.
+Use Cases of If-Elif-Else Conditional Statement:
+•	Handling multiple conditions sequentially.
+•	Implementing multi-way decision logic.
+Applications of If-Elif-Else Conditional Statement:
+•	Implementing menu selection logic.
+•	Categorizing data based on multiple criteria.
+Advantages of If-Elif-Else Conditional Statement:
+•	Allows handling multiple conditions in a structured manner.
+•	Reduces the need for nested if-else statements.
+Disadvantages of If-Elif-Else Conditional Statement:
+•	Can become lengthy and harder to maintain with many conditions.
+•	The order of conditions matters; incorrect ordering can lead to unexpected behavior.
+If-Else if Conditional Statement Implementation:
+C++JavaPythonJavaScript
+let x = 0;
+// Check if the number is positive
+if (x > 0) {
+    console.log("x is positive");
+}
+// If not positive, check if the number is negative
+else if (x < 0) {
+    console.log("x is not positive");
+}
+// If neither positive nor negative
+// the number is zero
+else {
+    console.log("x is not zero");
+}
+
+Output
+x is not zero
+4. Switch Conditional Statement:
+The switch statement is used when you need to check a variable against a series of values. It’s often used as a more readable alternative to a long if-else if chain.
+In switch expressions, each block is terminated by a break keyword. The statements in switch are expressed with cases.
+Switch Conditional Statement Syntax:
+switch (variable) {
+    case value1:
+        // code to execute if variable equals value1
+        break;
+    case value2:
+        // code to execute if variable equals value2
+        break;
+    default:
+        // code to execute if variable doesn't match any value
+}
+Use Cases of Switch Statement:
+•	Selecting one of many code blocks to execute based on the value of a variable.
+•	Handling multiple cases efficiently.
+Applications of Switch Statement:
+•	Processing user choices in a menu.
+•	Implementing state machines.
+Advantages of Switch Statement:
+•	Provides a clean and efficient way to handle multiple cases.
+•	Improves code readability when dealing with many conditions.
+Disadvantages of Switch Statement:
+•	Limited to equality comparisons, cannot use range checks or complex conditions.
+•	Lack of fall-through control can lead to unintentional bugs if not used carefully.
+Switch Conditional Statement Implementation:
+C++JavaPythonJavaScript
+// Declare and initialize the variable x
+let x = 2;
+
+// Use a switch statement to check the value of x
+switch (x) {
+    // If x is 1, print "x is one"
+    case 1:
+        console.log("x is one");
+        break;
+    // If x is 2, print "x is two"
+    case 2:
+        console.log("x is two");
+        break;
+    // For any other value of x, print "x is neither one nor two"
+    default:
+        console.log("x is neither one nor two");
+}
+
+Output
+x is two
+5. Ternary Expression Conditional Statement:
+The ternary operator is a shorthand way of writing an if-else statement. It takes three operands: a condition, a result for when the condition is true, and a result for when the condition is false.
+Syntax of Ternary Expression:
+condition ? result_if_true : result_if_false
+Use Cases of Ternary Expression:
+•	Concise conditional assignment.
+•	Inline conditional assignment.
+Applications of Ternary Expression:
+•	Assigning values based on conditions in functional programming.
+•	Inline conditional assignment in single lines of code.
+Advantages of Ternary Expression:
+•	Concise syntax, reducing the need for multiple lines of code.
+•	Suitable for simple conditional assignments.
+Disadvantages of Ternary Expression:
+•	Can reduce code readability, especially for complex conditions or expressions.
+•	Limited to simple assignments; not suitable for complex branching logic.
+Implementation of Ternary Expression:
+C++JavaPythonJavaScript
+// Define an integer variable x and assign the value
+// 10 to it
+let x = 10;
+
+// Use a ternary operator to check if x is positive
+// or not. If x is greater than 0, assign "x is
+// positive" to the result variable. Otherwise,
+// assign "x is not positive" to the result variable.
+let result = x > 0 ? "x is positive" : "x is not positive";
+
+// Print the result to the console
+console.log(result);
+
+Output
+x is positive
+JavaScript Ternary Operator
+Last Updated : 09 Oct, 2024
+•	
+•	
+•	
+The Ternary Operator in JavaScript is a shortcut for writing simple if-else statements. It’s also known as the Conditional Operator because it works based on a condition. The ternary operator allows you to quickly decide between two values depending on whether a condition is true or false.
+How Does the Ternary Operator Work?
+The ternary operator works with three parts:
+•	Condition: A statement that returns true or false.
+•	Value if True: What happens if the condition is true?
+•	Value if False: What happens if the condition is false?
+Examples
+Input: let result = (10 > 0) ? true : false;
+Output: true
+Input: let message = (20 > 15) ? "Yes" : "No";
+Output: Yes
+Syntax
+condition ? trueExpression : falseExpression
+
+
+            </xmp>
+        </div>
+        <div class="chapter4">
+            <xmp>
+                Chapter 4  Loops and Functions
+
+Loops are a fundamental concept in programming that allow developers to run the same block of code multiple times without writing it repeatedly. Loops are used to: 
+•	Save time: Loops reduce the number of lines of code, which can save time and reduce errors. 
+•	Make code more organized: Loops make code more manageable and organized, especially when dealing with complex or repetitive actions. 
+•	Simplify complex problems: Loops can simplify complex problems into easier ones. 
+•	Perform repetitive tasks efficiently: Loops allow programs to perform repetitive tasks efficiently. 
+Types of loops in Javascript
+•	for - loops through a block of code a number of times
+•	for/in - loops through the properties of an object
+•	for/of - loops through the values of an iterable object
+•	while - loops through a block of code while a specified condition is true
+•	do/while - also loops through a block of code while a specified condition is true
+The For Loop
+The for statement creates a loop with 3 optional expressions:
+for (expression 1; expression 2; expression 3) {
+  // code block to be executed
+}
+Expression 1 is executed (one time) before the execution of the code block.
+Expression 2 defines the condition for executing the code block.
+Expression 3 is executed (every time) after the code block has been executed.
+The For In Loop
+The JavaScript for in statement loops through the properties of an Object:
+Syntax
+for (key in object) {
+  // code block to be executed
+}
+Example
+const person = {fname:"John", lname:"Doe", age:25};
+
+let text = "";
+for (let x in person) {
+  text += person[x];
+}
+Example Explained
+•	The for in loop iterates over a person object
+•	Each iteration returns a key (x)
+•	The key is used to access the value of the key
+•	The value of the key is person[x]
+The For Of Loop
+The JavaScript for of statement loops through the values of an iterable object.
+It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:
+Syntax
+for (variable of iterable) {
+  // code block to be executed
+}
+
+variable - For every iteration the value of the next property is assigned to the variable. Variable can be declared with const, let, or var.
+iterable - An object that has iterable properties.
+The While Loop
+The while loop loops through a block of code as long as a specified condition is true.
+Syntax
+while (condition) {
+  // code block to be executed
+}
+Example
+In the following example, the code in the loop will run, over and over again, as long as a variable (i) is less than 10:
+Example
+while (i < 10) {
+  text += "The number is " + i;
+  i++;
+}
+If you forget to increase the variable used in the condition, the loop will never end. This will crash your browser.
+The Do While Loop
+The do while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+Syntax
+do {
+  // code block to be executed
+}
+while (condition);
+Example
+The example below uses a do while loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:
+Example
+do {
+  text += "The number is " + i;
+  i++;
+}
+while (i < 10);
+Do not forget to increase the variable used in the condition, otherwise the loop will never end!
+Functions  in javascript
+A JavaScript function is a block of code designed to perform a particular task.
+A JavaScript function is executed when "something" invokes it (calls it).
+Example
+// Function to compute the product of p1 and p2
+function myFunction(p1, p2) {
+  return p1 * p2;
+}________________________________________
+JavaScript Function Syntax
+A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+The parentheses may include parameter names separated by commas:
+(parameter1, parameter2, ...)
+The code to be executed, by the function, is placed inside curly brackets: {}
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+Function parameters are listed inside the parentheses () in the function definition.
+Function arguments are the values received by the function when it is invoked.
+Inside the function, the arguments (the parameters) behave as local variables.
+________________________________________
+Function Invocation
+The code inside the function will execute when "something" invokes (calls) the function:
+•	When an event occurs (when a user clicks a button)
+•	When it is invoked (called) from JavaScript code
+•	Automatically (self invoked)
+Function Return
+When JavaScript reaches a return statement, the function will stop executing.
+If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+Functions often compute a return value. The return value is "returned" back to the "caller":
+Example
+Calculate the product of two numbers, and return the result:
+// Function is called, the return value will end up in x
+let x = myFunction(4, 3);
+
+function myFunction(a, b) {
+// Function returns the product of a and b
+  return a * b;
+}
+
+            </xmp>
+        </div>
+        <div class="chapter5">
+            <div class="title">Module 3</div>
+            <xmp>
+                            Chapter 5 Strings
+
+Strings are used to store and manipulate text.String can be created using the following syntax
+let name = "Harry" -->Creates a string 
+name length-->This property prints length of the stung
+Strings can also be created using Single quotes
+let name = 'Harry'
+Template Literals Template literals Use backtics instead of quotes to define a string
+Let name = 'Harry'
+With template literals, it is possible to use both Single as well as double quotes inside a string
+let Sentence 'The name "is " Harry's 
+We can insert variables directly in template literal.This is called string interpolation 
+let a = 'This is ${name}' Prints This is a Harry
+Escape Sequence characters:
+Escape Characters(Backslash) are the symbol used to begin an escape command in order to execute some operation. Escape characters are characters that are used when working with special characters like single quotes, and double quotes, To print these characters as it is, including the backslash ‘\’ in front of them.
+Syntax:
+For single quotes:  \’  (backslash followed by single quote)
+For double quotes: \”  (backslash followed by double quotes)
+List of escape characters available in javascript:
+Escape character	Result
+\b 	This character is used to give a backspace
+\f 	This character is used for form feed
+\n 	This character is used to give a new Line
+\r 	This character is used for carriage Return
+\t 	This character is used for horizontal Tabulator
+\v 	This character is used for vertical Tabulator
+String Properties and Methods
+1.	Let name=”Mark”
+Name.length//prints 5
+2.	Let name=”Mark”
+Name.touppercase()//prints MARK
+3.	Let name=”Mark”
+Name.tolowercase()//prints mark
+4.	Let name=”Harry”
+Name.slice(2,4)//prints rr(from 2 to 4, 4 not included)
+5.	Let name=”Harry”
+Name.slice(2)//prints rry(from 2 to end)
+6.	Let name =”Harry bhai”
+Let newName=name.replace(“Bhai”,”Bhau”)
+7.	Let name1=”Harry”
+Let name2=”Naman”
+Let name3=name1.cancat(name2,”yes”)
+
+            </xmp>
+        </div>
+        <div class="chapter6">
+            <xmp>
+                Chapter 6 -Arrays
+
+If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+let car1 = "Saab";
+let car2 = "Volvo";
+let car3 = "BMW";
+However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?
+The solution is an array!
+An array can hold many values under a single name, and you can access the values by referring to an index number.
+Creating an Array
+Using an array literal is the easiest way to create a JavaScript Array.
+Syntax:
+const array_name = [item1, item2, ...];
+JavaScript Array Methods
+JavaScript Array length:
+The length property returns the length (size) of an array:
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let size = fruits.length;
+JavaScript Array toString()
+The JavaScript method toString() converts an array to a string of (comma separated) array values.
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+Result:
+Banana,Orange,Apple,Mango
+JavaScript Array at()
+ intoduced the array method at():
+Examples
+Get the third element of fruits using at():
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.at(2);
+JavaScript Array join()
+The join() method also joins all array elements into a string.
+It behaves just like toString(), but in addition you can specify the separator:
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");
+Result:
+Banana * Orange * Apple * Mango
+JavaScript Array pop()
+The pop() method removes the last element from an array:
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();
+Try it Yourself »
+The pop() method returns the value that was "popped out":
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.pop();
+JavaScript Array push()
+The push() method adds a new element to an array (at the end):
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");
+Try it Yourself »
+The push() method returns the new array length:
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let length = fruits.push("Kiwi");
+Try it Yourself »
+JavaScript Array shift()
+The shift() method removes the first array element and "shifts" all other elements to a lower index.
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();
+Try it Yourself »
+The shift() method returns the value that was "shifted out":
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits.shift();
+Try it Yourself »
+
+JavaScript Array unshift()
+The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon");
+Try it Yourself »
+The unshift() method returns the new array length:
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon");
+JavaScript Array length
+The length property provides an easy way to append a new element to an array:
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[fruits.length] = "Kiwi";
+JavaScript Array delete()
+Warning !
+Using delete() leaves undefined holes in the array.
+Use pop() or shift() instead.
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+delete fruits[0];
+JavaScript Array concat()
+The concat() method creates a new array by merging (concatenating) existing arrays:
+Example (Merging Two Arrays)
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+
+const myChildren = myGirls.concat(myBoys);
+Try it Yourself »
+Array copyWithin()
+The copyWithin() method copies array elements to another position in an array:
+Examples
+Copy to index 2, all elements from index 0:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.copyWithin(2, 0);
+Try it Yourself »
+Copy to index 2, the elements from index 0 to 2:
+const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+fruits.copyWithin(2, 0, 2);
+JavaScript Array flat()
+Introduced the Array flat() method.
+The flat() method creates a new array with sub-array elements concatenated to a specified depth.
+Example
+const myArr = [[1,2],[3,4],[5,6]];
+const newArr = myArr.flat();
+Try it Yourself »
+JavaScript Array flatMap()
+added the Array flatMap() method to JavaScript.
+The flatMap() method first maps all elements of an array and then creates a new array by flattening the array.
+Example
+const myArr = [1, 2, 3, 4, 5, 6];
+const newArr = myArr.flatMap(x => [x, x * 10]);
+JavaScript Array splice()
+The splice() method can be used to add new items to an array:
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+JavaScript Array slice()
+The slice() method slices out a piece of an array into a new array:
+Example
+Slice out a part of an array starting from array element 1 ("Orange"):
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1);
+Note
+The slice() method creates a new array.
+The slice() method does not remove any elements from the source array.
+JavaScript Array Iteration
+avaScript Array forEach()
+The forEach() method calls a function (a callback function) once for each array element.
+Example
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
+numbers.forEach(myFunction);
+
+function myFunction(value, index, array) {
+  txt += value + "<br>";
+}
+Try it Yourself »
+Note that the function takes 3 arguments:
+•	The item value
+•	The item index
+•	The array itself
+The example above uses only the value parameter. The example can be rewritten to:
+Example
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
+numbers.forEach(myFunction);
+
+function myFunction(value) {
+  txt += value + "<br>";
+}
+JavaScript Array map()
+The map() method creates a new array by performing a function on each array element.
+The map() method does not execute the function for array elements without values.
+The map() method does not change the original array.
+This example multiplies each array value by 2:
+Example
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+Try it Yourself »
+Note that the function takes 3 arguments:
+•	The item value
+•	The item index
+•	The array itself
+When a callback function uses only the value parameter, the index and array parameters can be omitted:
+Example
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+function myFunction(value) {
+  return value * 2;
+}
+JavaScript Array filter()
+The filter() method creates a new array with array elements that pass a test.
+This example creates a new array from elements with a value larger than 18:
+Example
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+Try it Yourself »
+Note that the function takes 3 arguments:
+•	The item value
+•	The item index
+•	The array itself
+In the example above, the callback function does not use the index and array parameters, so they can be omitted:
+Example
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+
+function myFunction(value) {
+  return value > 18;
+}
+JavaScript Array reduce()
+The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+The reduce() method works from left-to-right in the array. See also reduceRight().
+The reduce() method does not reduce the original array.
+This example finds the sum of all numbers in an array:
+Example
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+Try it Yourself »
+Note that the function takes 4 arguments:
+•	The total (the initial value / previously returned value)
+•	The item value
+•	The item index
+•	The array itself
+The example above does not use the index and array parameters. It can be rewritten to:
+Example
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+function myFunction(total, value) {
+  return total + value;
+}
+JavaScript Array.from()
+The Array.from() method returns an Array object from any object with a length property or any iterable object.
+Example
+Create an Array from a String:
+Array.from("ABCDEFG");
+
+
+
+            </xmp>
+        </div>
+        <div class="chapter7">
+            <div class="title">Module 4</div>
+            <xmp>
+                Chapter 7 –Javascript in the browser
+                
+JavaScript was initially created to make web pages alive. js can be written right in a web pages HTML to make it interactive.
+The browser has an embedded engine called the Javascript engine or the Javascript runtime.
+Javascript ability in the browser is very limited to protect the user safety for eg a webpage on http:// goofle.com Cannot access A http:// codeswear.com and steal information from there!
+
+Developer tools 
+Every browser has Some a developer tools Which makes a developer life a lot easy
+
+The script tag
+
+The script tag is used to insert Javascript into An HTML page
+The script tag can be used to insert extenal or internal scripts
+<script>
+alert("Hello")
+</script> //or..
+<script src="/js/thisoxe js"> </script>
+The benefit of a separate javascript file is that browser will download it and store it in the Cache.
+Console object methods.
+The console object has several methods, One of them Some of them are as thods, logs being follows:
+assert() used to assert a condition
+Clear() clears the console
+log() Outputs a message to the Console 
+table() Displays a tabular data
+Warn () → Used for warnings
+error() → used for errors
+info()→ used for special information
+
+You will naturally remember some or all of these with time Comprehensive list can be looked up on MDN
+JavaScript Interaction: alert, prompt, confirm
+1. alert
+Syntax:
+alert(message);
+This shows a message and pauses script execution until the user presses "OK". For example:
+alert("Hello");
+The mini-window with the message is called a modal window. The word "modal" means that the visitor can’t interact with the rest of the page until they have dealt with the window.
+2. prompt
+The function prompt accepts two arguments:
+•	title: The text to show the visitor.
+•	default: An optional second parameter, the initial value for the input field.
+result = prompt(title, [default]);
+It shows a modal window with a text message, an input field for the visitor, and the buttons OK/Cancel. The visitor may type something in the prompt input field and press OK. Or they can cancel the input by pressing Cancel or hitting the Esc key.
+The call to prompt returns the text from the input field or null if the input was canceled. For example:
+var age = prompt('How old are you?', 50);
+alert('You are ' + age + ' years old.');
+3. confirm
+Syntax:
+result = confirm(question);
+It shows a modal window with a question and two buttons: OK and Cancel. The result is true if OK is pressed and false otherwise. For example:
+var isTeacher = confirm('Are you a teacher?');
+alert(isTeacher);
+The Window Object
+The window object is supported by all browsers. It represents the browser's window.
+All global JavaScript objects, functions, and variables automatically become members of the window object.
+Global variables are properties of the window object.
+Global functions are methods of the window object.
+Even the document object (of the HTML DOM) is a property of the window object:
+window.document.getElementById("header");
+is the same as:
+document.getElementById("header");
+The window object is the top-level object of the Browser Object Model (BOM): 
+•	BOM
+The Browser Object Model is an API that allows JavaScript to communicate with the browser and manage browser windows. The BOM includes objects that represent the browser window, screen, history, and location. Some methods of the BOM include window.open(), window.close(), window.moveTo(), and window.resizeTo(). 
+•	DOM
+The Document Object Model is a programming interface that represents and interacts with HTML, XHTML, and XML documents. The DOM provides a tree-like structure of nodes that represent the elements of a web page. The DOM is a standard defined by the World Wide Web Consortium (W3C). 
+The BOM and DOM work together to create interactive and dynamic web experiences. The BOM can be thought of as the conductor of an orchestra, while the DOM represents the individual instruments.
+
+
+            </xmp>
+        </div>
+        <div class="chapter8">
+            <div class="title">Module 5</div>
+            <xmp>
+                Chapter 8 Walking the DOM
+
+Walking the DOM: A Brief Overview
+What is the DOM?
+The Document Object Model (DOM) is a tree-like structure that represents an HTML document.
+ Each element, text, and comment in the HTML document is represented as a node in the DOM tree.
+Why Walk the DOM?
+ Manipulation: To modify the structure, style, or content of HTML elements.
+ Dynamic Content: To create interactive web pages that respond to user input.
+ Data Extraction: To extract information from HTML documents for further processing.
+Key DOM Navigation Properties and Methods:
+ Parent Node:
+    Parent Node: Returns the parent node of the current node.
+    Parent Element: Returns the parent element node of the current element node.
+ Child Nodes:
+  Child Nodes: Returns a NodeList of all child nodes, including text nodes and comment nodes.
+   First Child: Returns the first child node.
+  Last Child: Returns the last child node.
+   children: Returns an HTMLCollection of all child element nodes.
+   First Element Child: Returns the first child element node.
+   Last Element Child: Returns the last child element node.
+ Sibling Nodes:
+   Next Sibling: Returns the next sibling node.
+    Previous Sibling: Returns the previous sibling node.
+    Next Element Sibling: Returns the next sibling element node.
+   Previous Element Sibling: Returns the previous sibling element node.
+Common DOM Traversal Techniques:
+ * Tree Traversal:
+   * Depth-First Search (DFS): Traverses the tree by going as deep as possible before moving to the next sibling.
+   Breadth-First Search (BFS): Traverses the tree level by level.
+ Node Selection:
+   Get Element ById(): Selects an element by its ID attribute.
+   getElements ByTagName(): Selects elements by their tag name.
+   getElements ByClassName(): Selects elements by their class name.
+   query Selector(): Selects the first element that matches a CSS selector.
+   Query SelectorAll(): Selects all elements that match a CSS selector.
+Example:
+// Get a reference to the first <p> element
+const firstParagraph = document.querySelector('p');
+
+// Get the parent element of the first paragraph
+const parentDiv = firstParagraph.parentElement;
+
+// Get the next sibling element of the first paragraph
+const nextSibling = firstParagraph.nextElementSibling;
+
+// Modify the text content of the next sibling
+nextSibling.textContent = 'This text has been changed.';
+
+DOM Traversal: 
+DOM traversal is the process of navigating through the Document Object Model (DOM) tree to access and manipulate its nodes. This is a fundamental skill for web developers, as it allows you to dynamically modify web pages and create interactive user experiences.
+Types of DOM Traversal
+There are primarily two main types of DOM traversal:
+ Node-Based Traversal:
+   This approach involves using properties and methods directly on DOM nodes to move up, down, and sideways in the DOM tree.
+   Key Properties and Methods:
+   Parent Node: Returns the parent node of the current node.
+   Child Nodes: Returns a NodeList of all child nodes.
+   First Child: Returns the first child node.
+   Last Child: Returns the last child node.
+   Next Sibling: Returns the next sibling node.
+   Previous Sibling: Returns the previous sibling node.
+   Example:
+   const firstParagraph = document.querySelector('p');
+const parentDiv = firstParagraph.parentNode;
+const nextSibling = firstParagraph.nextSibling;
+
+ Selector-Based Traversal:
+   This approach leverages CSS selectors to target specific elements in the DOM. It's often more concise and efficient than node-based traversal.
+   Key Methods:
+   document.getElementById(id): Selects an element by its ID.
+   document.getElementsByTagName(tagName): Selects elements by their tag name.
+   document.getElementsByClassName(className): Selects elements by their class name.
+   document.querySelector(selector): Selects the first element matching the CSS selector.
+   document.querySelectorAll(selector): Selects all elements matching the CSS selector.
+   Example:
+   const allParagraphs = document.querySelectorAll('p');
+const firstHeader = document.querySelector('h1');
+
+Common DOM Traversal Techniques
+ Depth-First Search (DFS):
+ Traverses the tree by going as deep as possible before moving to the next sibling.
+ Useful for tasks like recursive tree algorithms or finding specific elements within a complex DOM structure.
+ Breadth-First Search (BFS):
+   Traverses the tree level by level.
+   Useful for tasks like validating the structure of a DOM tree or processing elements in a specific order.
+Best Practices for DOM Traversal
+ Minimize DOM Manipulation: Excessive DOM manipulation can negatively impact performance. Use techniques like batching updates and virtual DOM to optimize your code.
+ Use Efficient Selectors: Select elements efficiently using CSS selectors. Avoid slow selectors like document.getElementsByTagName('*').
+ Consider Performance Implications: Be mindful of the performance impact of your traversal methods, especially when dealing with large DOM trees.
+ Utilize Modern JavaScript Features: Leverage modern JavaScript features like for...of loops and array methods to simplify DOM traversal and manipulation.
+By mastering DOM traversal techniques, you can create dynamic and interactive web pages that respond to user input and provide a seamless user experience.
+
+            </xmp>
+        </div>
+    </div>
+</div>
+<script src="index2.js"></script>
+</body>
+</html>
