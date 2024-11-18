@@ -19,7 +19,7 @@
     width: 350px;
     border: 0.5px solid rgb(198, 198, 198);
     font-weight: 400;
-    background-color: white;
+    background-color: #181818;
     border-radius: 8px;
     font-size: 30px;
     font-family: 'Segoe UI';
@@ -43,22 +43,23 @@ input{
     width: 95%;
     margin-top: 18px;
     /* border: 0.1px solid rgb(173, 173, 173); */
+    background-color: #181818;  
     font-size: 20px;
     border-radius: 8px;
-    color: white;
+    /* color: #4DE1FF; */
     font-weight: 600;
-    background-color: #f15555;
+    /* background-color: #f15555; */
     cursor: pointer;
 }
 
 #login:hover{
     /* background-color: #6826aa; */
-    background-color: #fd8585;
+    /* background-color: #fd8585; */
     transition: 400ms;
 }
 #login a{
     text-decoration: none;
-    color: white;
+    color: #4DE1FF;
 }
 .newac{
     padding-top: 15px;
@@ -78,20 +79,21 @@ input{
     /* border: 0.1px solid rgb(173, 173, 173); */
     font-size: 20px;
     border-radius: 8px;
-    color: white;
+    color: #4DE1FF;
+    background-color: #181818;
     font-weight: 600;
     /* font-family: 'Segoe UI'; */
-    background-color: #f15555;
+    /* background-color: #f15555; */
     cursor: pointer;
 }
 #signup a{
     text-decoration: none;
-    color: white;
+    color: #4DE1FF;
 }
 #signup:hover{
     /* background-color: #6826aa; */
-    background-color: #fd8585;
-    color: #f15555;
+    background-color: #2c2c2c;
+    /* color: #f15555; */
     transition: 400ms;
 } 
 .message{

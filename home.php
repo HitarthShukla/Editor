@@ -62,7 +62,7 @@ echo "<script>
         <a href="learn.php" class="subscript">
             <img src="elearn.png" class="bgimage3" alt="back3"/>Let's Learn
         </a>
-        <a href="connect.php" class="subscript">
+        <a href="connect" class="subscript">
             <img src="econnect.png" class="bgimage4" alt="back4"/>Let's Connect
         </a>
     <div class="type-text">

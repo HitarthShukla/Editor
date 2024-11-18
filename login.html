@@ -3,20 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Page</title>
+    <title>CodynLrn</title>
     <link rel="stylesheet" href="style_login.css">
 </head>
+<style>
+    body{
+        background-color: #181818;
+        color: #f1f1f1;
+    }
+
+    .portal{
+        background-color: #181818;
+        border-color: #696969;
+    }
+    #box{
+        background-color: #2C2C2C;
+        color: #f1f1f1;
+        border-color: rgb(79, 79, 79);
+    }
+    ::placeholder{
+        color: #f1f1f1;
+    }
+    #login{
+        background-color: #181818;
+        color: #4DE1FF;
+
+    }
+    #login:hover{
+        background-color: #232323;
+        color: #29ceef;
+    }
+    #signup {
+        background-color: #181818;
+        color: #4DE1FF;
+    }
+    #back{
+        background-color: #f1f1f1;
+        border-radius: 15px;
+        margin-left: 8px;
+    }
+</style>
 <body>
     <form method="post" action="login.php">
         <div class="logo">
-            <h1><strong>CodynLrn</strong><img src="logo2.png" alt=""></h1>
+            <h1><strong>CodynLrn</strong><img src="logo2.png" alt="" id="back"></h1>
         </div>
         <div class="portal">
             <div class="head">Sign in</div>
             <label for="username">Username</label>
-            <input type="text" name="UserName" placeholder="Enter Your Name" maxlength="130" required>
+            <input type="text" id="box" name="UserName" placeholder="Enter Your Name" maxlength="130" required>
             <label for="password">Password</label>
-            <input type="password" name="Password" placeholder="Enter Your Password" maxlength="130" required>
+            <input type="password" id="box" name="Password" placeholder="Enter Your Password" maxlength="130" required>
             <input type="submit" name="submit" id="login" value="Login">
                 <!-- <a href="login.html">Login</a> -->           
             <div class="newac">Not having an existing account?</div>
