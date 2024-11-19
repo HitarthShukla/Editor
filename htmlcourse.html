@@ -152,7 +152,6 @@
             <xmp >
                     Chapter 1 Intoduction to the HTML
 
-
 The full form of HTML is Hyper Text Markup Language.HTML is a markup 
 language that defines the structure of your content.HTML consists of 
 a series of elements, which you use to enclose,or wrap, different pa
@@ -179,26 +178,54 @@ created using HTML.Java Script is used to program Logic for the page
 layout eg What happens when a user hovers on a text, when to hide or
 show elements etc.,
 
-•	A Beautiful Analogy:
-HTML=Car body (Only Metal)
-CSS	=Car Paint, decoration, etc.
-JAVASCRIPT=Car engine + Interior Logic.
+•A Beautiful Analogy:
+HTML= Car body (Only Metal)
+CSS	= Car Paint, decoration, etc.
+JAVASCRIPT= Car engine + Interior Logic.
 
-So we will start learning how to build beautiful layouts in this course from the basic to the advanced level
-
+So we will start learning how to build beautiful layouts in this cou
+rse from the basic to the advanced level
             </xmp>
         </div>
         <div class="chapter2">
             <xmp>
                 Chapter 2- A Brief history of HTML
-The first version of HTML was written by Tim Berners-Lee in 1993. Since then, there have been many different versions of HTML. The most widely used version throughout the 2000's was HTML 4.01, which became an official standard in December 1999.
+
+The first version of HTML was written by Tim Berners-Lee in 1993. Si
+nce then, there have been many different versions of HTML. The most-
+widely used version throughout the 2000's was HTML 4.01, which becam
+e an official standard in December 1999.
 The picture of the different versions of the HTML are bellow:
 
-Another version, XHTML, was a rewrite of HTML as an XML language. XML is a standard markup language that is used to create other markup languages. Hundreds of XML languages are in use today, including GML (Geography Markup Language), MathML, MusicML, and RSS (Really Simple Syndication). Since each of these languages was written in a common language (XML), their content can easily be shared across applications. This makes XML potentially very powerful, and it's no surprise that the W3C would create an XML version of HTML (again, called XHTML). XHTML became an official standard in 2000, and was updated in 2002. XHTML is very similar to HTML, but has stricter rules. Strict rules are necessary for all XML languages, because without it, interoperability between applications would be impossible. You'll learn more about the differences between HTML and XHTML.
-Most pages on the Web today were built using either HTML 4.01 or XHTML 1.0. However, in recent years, the W3C (in collaboration with another organization, the WHATWG), has been working on a brand new version of HTML, HTML5. Currently (2011), HTML5 is still a draft specification, and is not yet an official standard. However, it is already widely supported by browsers and other web-enabled devices, and is the way of the future. Therefore, HTML5 is the primary language taught in this course.
+Another version, XHTML, was a rewrite of HTML as an XML language. XML
+is a standard markup language that is used to create other markup lan
+guages. Hundreds of XML languages are in use today, including GML(Geo
+graphy Markup Language), MathML, MusicML, and RSS (Really Simple Synd
+ication). Since each of these languages was written in a common langu
+age (XML), their content can easily be shared across applications.Thi
+s makes XML potentially very powerful, and it's no surprise that the-
+W3C would create an XML version of HTML (again, called XHTML).XHTML b
+ecame an official standard in 2000, and was updated in 2002.XHTML is-
+very similar to HTML, but has stricter rules. Strict rules are necess
+ary for all XML languages, because without it,interoperability betwee
+n applications would be impossible. You'll learn more aboutthe differ
+ences between HTML and XHTML.
+
+Most pages on the Web today were built using either HTML 4.01 or XHTM
+L 1.0. However, in recent years, the W3C (in collaboration with anoth
+er organization, the WHATWG), has been working on a brand new version
+of HTML, HTML5. Currently (2011), HTML5 is still a draft specificatio
+n, and is not yet an official standard. However, it is already widely
+supported by browsers and other web-enabled devices, and is the way o
+f the future. Therefore, HTML5 is the primary language taught in this
+course.
 
 ->So where to write the code of HTML and Where to run it?
-the answer of the above question is, today in the world of tech there are so many software,text editors and IDE for the different languages. but we can use the simple Notepad for the HTML codes and will run it in the chrome. other option is to run on the IDE 's like Visual Studio code, etc.we can go to google, type VS code and install it. 
+the answer of the above question is, today in the world of tech there
+are so many software,text editors and IDE for the different language-
+s. but we can use the simple Notepad for the HTML codes and will run-
+it in the chrome. other option is to run on the IDE 's like Visual St
+udio code, etc.we can go to google, type VS code and install it. 
             </xmp>
         </div>
         <div class="quizcontainer">
@@ -207,13 +234,18 @@ the answer of the above question is, today in the world of tech there are so man
             <div id="result" class="result"></div>
             <button id="submit" class="button">Submit</button>
             <button id="retry" class="button hide">Retry</button>
-            <button id="showAnswer" class="button hide">Show Answer</button>
+            <button id="showAnswer" class="button hide">Show Answer
+
+            </button>
         </div>
         <div class="chapter3">
             <xmp>
+                
                 Chapter 3  Creating our First Website part-1
 
-we will start building a website by creating a file named index.html. index.html is a special filename which is a special filename which ispresented when the website root address is typed.
+we will start building a website by creating a file named index.html.
+index.html is a special filename which is a special filename which is
+presented when the website root address is typed.
 ->A Basic HTML Page
 <! Doctype html> --> specifies this is an html 5 doc
 <html> -->root of an HTML page
@@ -226,14 +258,40 @@ we will start building a website by creating a file named index.html. index.html
 </html>
 
 -->now lets see this HTML pages in detail:
-<!doctype html> — doctype. It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However, these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
-<html></html> — the <html> element. This element wraps all the content on the entire page and is sometimes known as the root element. It also includes the lang attribute, setting the primary language of the document.
-<head></head> — the <head> element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
-<meta charset="utf-8"> — This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later on.
-<meta name="viewport" content="width=device-width"> — This viewport element ensures the page renders at the width of viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down.
-<title></title> — the <title> element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.
-<body></body> — the <body> element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
-
+<!doctype html> — doctype. It is a required preamble. In the mists of
+time, when HTML was young (around 1991/92), doctypes were meant to ac
+t as links to a set of rules that the HTML page had to follow to be c
+onsidered good HTML, which could mean automatic error checking and ot
+her useful things. However, these days, they don't do much and are ba
+sically just needed to make sure your document behaves correctly. Tha
+t's all you need to know for now.
+<html></html> — the <html> element. This element wraps all the conten
+t on the entire page and is sometimes known as the root element.It al
+so includes the lang attribute, setting the primary language of the d
+ocument.
+<head></head> — the <head> element. This element acts as a container-
+for all the stuff you want to include on the HTML page that isn't the
+content you are showing to your page's viewers. This includes things-
+like keywords and a page description that you want to appear in searc
+h results, CSS to style our content, character set declarations, and-
+more.
+<meta charset="utf-8"> — This element sets the character set your doc
+ument should use to UTF-8 which includes most characters from the vas
+t majority of written languages. Essentially, it can now handle any t
+extual content you might put on it. There is no reason not to set thi
+s, and it can help avoid some problems later on.
+<meta name="viewport" content="width=device-width"> — This viewport e
+lement ensures the page renders at the width of viewport, preventing-
+mobile browsers from rendering pages wider than the viewport and then
+shrinking them down.
+<title></title> — the <title> element. This sets the title of your pa
+ge, which is the title that appears in the browser tab the page is lo
+aded in. It is also used to describe the page when you bookmark/favor
+ite it.
+<body></body> — the <body> element. This contains all the content tha
+t you want to show to web users when they visit your page, whether th
+at's text, images, videos, games, playable audio tracks, or whatever-
+else.
             </xmp>
         </div>
         <div class="chapter4">
@@ -243,30 +301,39 @@ we will start building a website by creating a file named index.html. index.html
 A tag is like the container for either content or other HTML tags.
 HTML document  ==>Browser ==>Rendered page
 
-
 Notes:
 1) head and body tags are children of HTML tag.
 2)HTML is the parent of Head and Body tags.
-3)most of the HTML elements have opening and closing tag with content in between opening and closing tags.
-4)some HTML tags have no content.These are called Empty elements eg<br>
+3)most of the HTML elements have opening and closing tag with content
+in between opening and closing tags.
+4)some HTML tags have no content.These are called Empty elements eg
+<br>
 5)we can either use .htm or .html extension
-6)you can use"Inspect Element" or "View page source " option from chroe to look into a website's HTML code.
+6)you can use"Inspect Element" or "View page source " option from chr
+ome to look into a website's HTML code.
 7)HTML element =start tag +Content +End tag
 
-==>Comments in HTML
-Comments in HTML are used to mark text which should not be passed. They can help document the source code. The comment tag is used to insert comments in the source code. Comments are not displayed in the browsers.You can use comments to explain your code, which can help you when you edit the source code at a later date. This is especially useful if you have a lot of code.
+==>Comments in HTML:
+Comments in HTML are used to mark text which should not be passed. Th
+ey can help document the source code. The comment tag is used to inse
+rt comments in the source code. Comments are not displayed in the bro
+wsers.You can use comments to explain your code, which can help you w
+hen you edit the source code at a later date. This is especially usef
+ul if you have a lot of code.
 <!--HTML Comment-->
 
 ==>Case Senstivity
-•	HTML is a case insensitive language. <H1> and<h1>tags are the same.
-•	HTML tags are not case sensitive: <P> means the same as <p>.
-The HTML standard does not require lowercase tags, but we recommend lowercase in HTML, and demands lowercase for stricter document types like XHTML.
-
+•HTML is a case insensitive language. <H1> and<h1>tags are the same.
+•HTML tags are not case sensitive: <P> means the same as <p>.
+The HTML standard does not require lowercase tags, but we recommend l
+owercase in HTML, and demands lowercase for stricter document types l
+ike XHTML.
             </xmp>
         </div>
         <div class="chapter5">
             <xmp>
                 Chapter 5 -Basic HTML Tags Part1
+
 We can add elements inside the body tag to define the page layout
 
 •	HTML Element
@@ -283,7 +350,8 @@ a=anchor tag and href=href attribute
 we can either use single or double quotes in attributes
 
 •	The Heading tag
-heading tag is used to mark headings in HTML.from h1 to h6,we have tags for the most important to the least least important heading.
+heading tag is used to mark headings in HTML.from h1 to h6,we have ta
+gs for the most important to the least least important heading.
 <h1>Most important heading</h1>
 <h2>Heading</h2>
 <h3>Heading</h3>
@@ -298,14 +366,14 @@ paragraph tag are used to add paragraphs to an HTML page
 <p>This is a paragraph</p>
 
 •	The Anchor Tag
-The Anchor Tagis used to add links to an existing content inside a HTML page.
+The Anchor Tagis used to add links to an existing content inside a HT
+ML page.
 <a href="https://google.com">click me</a>
 
 •	The img Tag
 img tag is used to add images in an THML page 
 <img src="image.jpg">
 Here image.jpg is relative url of an image
-
             </xmp>
         </div>
         <div class="chapter6">
@@ -313,18 +381,25 @@ Here image.jpg is relative url of an image
                 Chapter 6 -Basic HTML Tags Part2
 
 •	Bold, italic and underline tags
-we can use bold, italic and underline tags to highlight the text as follows:
+we can use bold, italic and underline tags to highlight the text as f
+ollows:
 <b> This is Bold</b>
 <i>This is italic</i>
 <u>This is underline</u>
 
 •	br tag
-The br tag is used to creat line breaks in an HTML documents. The <br> tag inserts a single line break.The <br> tag is useful for writing addresses or poems.The <br> tag is an empty tag which means that it has no end tag. The <br> tag also supports the Global Attributes in HTML. The <br> tag also supports the Global Attributes in HTML.
+The br tag is used to creat line breaks in an HTML documents. The<br>
+tag inserts a single line break.The <br> tag is useful for writing ad
+dresses or poems.The <br> tag is an empty tag which means that it has
+no end tag. The <br> tag also supports the Global Attributes in HTML
+.The <br> tag also supports the Global Attributes in HTML.
 •	big and small tags
-We can make the text a bit larger and a biit smaller using big and small tags respectively.
+We can make the text a bit larger and a biit smaller using big and sm
+all tags respectively.
 
 •	hr tag
-<hr> tag in HTML is used to creat a horizontalruler often used to separate the content.
+<hr> tag in HTML is used to creat a horizontalruler often used to sep
+arate the content.
 
 •	subscript and superscript
 we can add subscript ans superscripts in HTML as follows:
@@ -332,7 +407,8 @@ we can add subscript ans superscripts in HTML as follows:
 <sup>This</sup>is superscript
 
 •	The pre Tag
-HTML always ignores spaces and newlines. In order to display a piece of text as is, we use pre tag
+HTML always ignores spaces and newlines. In order to display a piece-
+of text as is, we use pre tag
 <pre>
 This is written
 using pre				==>Rendered as-is
@@ -343,9 +419,12 @@ tag
         </div>
         <div class="chapter7">
             <xmp>
+                
                 Chapter 7 Creating a Page layout
-when we use the right tag in right place, it results in a better page layout,better indexing by search engines ans better user experience.
-we use the following tag to get the job done 
+
+when we use the right tag in right place, it results in a better page
+layout,better indexing by search engines ans better user experience.w
+e use the following tag to get the job done 
 <header>		--->contains nav tag
 <main>		}website layout
 <footer>
@@ -356,33 +435,45 @@ inside the main tag we insert the folowing tags:
 <article>-->a self contained content
 <aside>-->content aside from the ontent(e.gAds etc)
 </main>-->The main closing tag
-creating a page lke this is not necessry but it creates a readable and structured layout.
+creating a page lke this is not necessry but it creates a readable an
+d structured layout.
 also they are usefull for SEO
 
 Link attributes
 <a href="/contact">Contact us</a>-->contact page opens in same tab
-<a g=href="/contact"target="blank">contact us</a>-->opens in the new tab
-we can put any content inside an anchor tag(images,headings etc are all allowed)
-if the page is inside a directory,we need to make sure that we link to the correct page-->same applies to img tag as well
+<a g=href="/contact"target="blank">contact us</a>-->opens in the new-
+tab
+we can put any content inside an anchor tag(images,headings etc are a
+ll allowed)
+if the page is inside a directory,we need to make sure that we link t
+o the correct page-->same applies to img tag as well
 
 we can add links to images like this
-<a href="/layout"><img src='a.spg'width="120"></a>-->height will be set automatically
+<a href="/layout"><img src='a.spg'width="120"></a>-->height will be s
+et automatically
 
 The Div Tag
-div tag is often used as a container for other elements div is a block level element-->always takes full width.
+div tag is often used as a container for other elements div is a bloc
+k level element-->always takes full width.
 The <div> tag defines a division or a section in an HTML document.
-The <div> tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript.
+The <div> tag is used as a container for HTML elements - which is the
+n styled with CSS or manipulated with JavaScript.
 The <div> tag is easily styled by using the class or id attribute.
 Any sort of content can be put inside the <div> tag! 
-Note: By default, browsers always place a line break before and after the <div> element.
+Note: By default, browsers always place a line break before and after
+the <div> element.
 The <div> tag also supports the Global Attributes in HTML.
-________________________________________The <div> tag also supports the Event Attributes in HTML.
+________________________________________The <div> tag also supports t
+    he Event Attributes in HTML.
 
 The span tag 
 span is an inline container-->Takes as much width as necessary
-The <span> tag is an inline container used to mark up a part of a text, or a part of a document.
-The <span> tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
-The <span> tag is much like the <div> element, but <div> is a block-level element and <span> is an inline element.
+The <span> tag is an inline container used to mark up a part of a tex
+t, or a part of a document.
+The <span> tag is easily styled by CSS or manipulated with JavaScript
+using the class or id attribute.
+The <span> tag is much like the <div> element, but <div> is a block-l
+evel element and <span> is an inline element.
 The <span> tag also supports the Global Attributes in HTML.
 The <span> tag also supports the Event Attributes in HTML.
 
